@@ -1,5 +1,5 @@
 {
-  "name": "vue-uibox",
+  "name": "vue-uix",
   "version": "0.0.1",
   "description": "Vue components based on the JUI components available in Vue.js",
   "main": "src/main.js",
@@ -8,12 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/juijs/vue-uibox.git"
+    "url": "git+https://github.com/juijs/vue-uix.git"
   },
   "author": "alvin.h <seogi777@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/juijs/vue-uibox/issues"
+    "url": "https://github.com/juijs/vue-uix/issues"
   },
-  "homepage": "https://github.com/juijs/vue-uibox#readme"
+  "homepage": "https://github.com/juijs/vue-uix#readme",
+  "dependencies": {
+    "juijs-ui": "^2.2.1-es6"
+  }
 }
