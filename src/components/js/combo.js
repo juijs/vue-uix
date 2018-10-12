@@ -1,3 +1,4 @@
+import methods from '../../base/methods'
 import JUI from 'juijs-ui'
 import ComboComp from 'juijs-ui/src/components/combo'
 
@@ -5,6 +6,7 @@ JUI.use(ComboComp);
 
 export default {
     name: 'uix-combo',
+    mixins: [ methods ],
     props: {
         index: {
             type: Number,
@@ -86,17 +88,6 @@ export default {
             }
         }
     },
-    methods: {
-        containValue: function(value) {
-            for (let data of this.items) {
-                if (value == data.value) {
-                    return true;
-                }
-            }
-
-            return false;
-        }
-    },
     mounted: function() {
         const self = this;
 
@@ -110,6 +101,8 @@ export default {
             position: this.position,
             event: {
                 'change': function(data, e) {
+                    if(!e) return;
+
                     self.$emit('change', data, e);
                 }
             }

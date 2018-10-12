@@ -16,21 +16,35 @@
 <!--<body class="jui">-->
 <body>
 <div id="app">
-    <uix-combo :width="200" :items="items" :value="value" :active="active" @change="onChangeEvent"></uix-combo>
+    <uix-button :items="buttons" :value="value" :type="'radio'" @change="onChangeEvent"></uix-button>
+    <uix-combo :items="combos" @change="onChangeEvent"></uix-combo>
 </div>
 <script>
     window.vm = new Vue({
         el: "#app",
         data: {
-            items: [
+            // button options
+            buttons: [
+                { icon: "", text: "A", value: "1", style: { width: "70px" } },
+                { icon: "", text: "B", value: "2", style: { width: "70px" } },
+                { icon: "", text: "C", value: "3", style: { width: "70px" } },
+                { icon: "home", text: "Home", value: "home", focus: true },
+                { icon: "gear", text: "Gear", value: "gear" },
+                { icon: "help", text: "", value: "help" }
+            ],
+            style: {
+                width: 200
+            },
+            value: [ "home", "help" ],
+
+            // combo options
+            combos: [
                 { text: "한국", value: "ko" },
                 { text: "미국", value: "en" },
                 { text: "일본", value: "ja" },
                 { text: "중국", value: "zh" },
                 { text: "프랑스", value: "fr" }
-            ],
-            value: "en",
-            active: false
+            ]
         },
         methods: {
             onChangeEvent: function(data, e) {
