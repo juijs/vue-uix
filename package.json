@@ -1,13 +1,12 @@
 {
   "name": "vue-uix",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Vue components based on the JUI components available in Vue.js",
   "main": "src/main.js",
   "files": [
     "bundles",
     "dist",
     "examples",
-    "images",
     "src",
     "package.json",
     "README.md",
@@ -18,6 +17,7 @@
   "scripts": {
     "start": "npm run dev",
     "dev": "webpack-dev-server --env dev",
+    "prod": "webpack --env=prod",
     "prod:classic": "webpack --env=prod",
     "prod:dark": "webpack --env=prod"
   },
@@ -26,7 +26,10 @@
     "vue-graph",
     "vue-uix",
     "jui",
-    "component"
+    "component",
+    "javascript",
+    "ui",
+    "uix"
   ],
   "repository": {
     "type": "git",

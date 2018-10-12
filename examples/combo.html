@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="content-type" content="charset=utf-8;"/>
-    <link rel="stylesheet" href="../dist/vue-uix.dark.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.js"></script>
-    <script src="../dist/vue-uix.dark.js"></script>
+
+    <!-- TODO: When there is no dependency on the JUI style, load the script for that theme -->
+    <script src="../dist/vue-uix.classic.js"></script>
+    <link rel="stylesheet" href="../dist/vue-uix.css" />
+
+    <!-- TODO: When the page is already loaded with the JUI style -->
+    <!--<script src="../dist/vue-uix.base.js"></script>-->
+    <!--<link rel="stylesheet" href="../node_modules/juijs-ui/dist/jui-ui.classic.css" />-->
 </head>
-<body>
+<body class="jui">
 <div id="app">
     <uix-combo :width="200" :items="items" @change="onChangeEvent"></uix-combo>
 </div>

@@ -1,6 +1,6 @@
-<template src="./combo.html"></template>
+<template src="./html/combo.html"></template>
 
-<script src="./combo.js"></script>
+<script src="./js/combo.js"></script>
 
 <style scoped lang="less">
     @import "~juijs-ui/src/styles/base/mixins.less";

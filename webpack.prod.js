@@ -1,5 +1,4 @@
 const path = require('path');
-const nodeExternals = require('webpack-node-externals');
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
@@ -14,7 +13,7 @@ module.exports = (theme) => {
         },
         externals: {
             jquery: 'jQuery',
-            vue: 'vue'
+            vue: 'Vue'
         },
         output: {
             path: path.resolve(__dirname, 'dist'),
@@ -46,21 +45,20 @@ module.exports = (theme) => {
                 ]
             }, {
                 test: /\.(ttf|eot|svg|woff|png|gif)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-                use: [
-                    {
-                        loader: 'url-loader',
-                        options: {
-                            limit: 1024 * 10
-                        }
+                use: [{
+                    loader: 'url-loader',
+                    options: {
+                        limit: 1024 * 1024
                     }
-                ]
+                }]
             }]
         },
         plugins: [
-            new VueLoaderPlugin(),
             new MiniCssExtractPlugin({
-                filename: `[name].${theme}.css`,
+                filename: '[name].css',
             }),
+            new OptimizeCssAssetsPlugin(),
+            new VueLoaderPlugin(),
             new BundleAnalyzerPlugin()
         ],
         resolve: {
