@@ -64,8 +64,8 @@ module.exports = () => {
             new HtmlWebpackPlugin({
                 template: path.resolve(__dirname, 'bundles', 'index.html'),
                 filename: path.resolve(__dirname, 'out', 'index.html')
-            }),
-            new BundleAnalyzerPlugin()
+            })
+            // , new BundleAnalyzerPlugin()
         ],
         resolve: {
             alias: {

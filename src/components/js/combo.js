@@ -54,6 +54,47 @@ export default {
         items: {
             type: Array,
             required: true
+        },
+        active: {
+            type: Boolean,
+            required: false,
+            default: false
+        }
+    },
+    watch: {
+        items: function(newVal, oldVal) {
+            if(newVal.length == 0) return;
+
+            this.uix.reload();
+            this.$el.children[0].innerHTML = newVal[0].text;
+        },
+        index: function(newVal, oldVal) {
+            if(newVal > -1 && newVal < this.items.length) {
+                this.uix.setIndex(newVal);
+            }
+        },
+        value: function(newVal, oldVal) {
+            if(this.containValue(newVal)) {
+                this.uix.setValue(newVal);
+            }
+        },
+        active: function(newVal, oldVal) {
+            if(newVal) {
+                this.uix.open();
+            } else {
+                this.uix.fold();
+            }
+        }
+    },
+    methods: {
+        containValue: function(value) {
+            for (let data of this.items) {
+                if (value == data.value) {
+                    return true;
+                }
+            }
+
+            return false;
         }
     },
     mounted: function() {
@@ -70,12 +111,6 @@ export default {
             event: {
                 'change': function(data, e) {
                     self.$emit('change', data, e);
-                },
-                'open': function(e) {
-                    self.$emit('open', e);
-                },
-                'fold': function() {
-                    self.$emit('fold');
                 }
             }
         });
