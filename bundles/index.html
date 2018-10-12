@@ -2,14 +2,14 @@
 <html>
 <head>
     <meta http-equiv="content-type" content="charset=utf-8;"/>
+    <!-- TODO: When the page is already loaded with the JUI style -->
+    <!--<link rel="stylesheet" href="jui-ui.classic.css" />-->
 </head>
+<!-- TODO: When the page is already loaded with the JUI style -->
+<!--<body class="jui">-->
 <body>
-
 <div id="app">
-    <section class="container">
-        <uix-combo :width="200" :items="items" @change="onChangeEvent"></uix-combo>
-    </section>
+    <uix-combo :width="200" :items="items" @change="onChangeEvent"></uix-combo>
 </div>
-
 </body>
 </html>

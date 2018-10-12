@@ -53,7 +53,7 @@ module.exports = () => {
                     {
                         loader: 'url-loader',
                         options: {
-                            limit: 1024 * 10
+                            limit: 1024 * 1024
                         }
                     }
                 ]
@@ -63,11 +63,7 @@ module.exports = () => {
             new VueLoaderPlugin(),
             new HtmlWebpackPlugin({
                 template: path.resolve(__dirname, 'bundles', 'index.html'),
-                filename: path.resolve(__dirname, 'out', 'index.html'),
-                minify: {
-                    removeComments: true,
-                    collapseWhitespace: true,
-                }
+                filename: path.resolve(__dirname, 'out', 'index.html')
             }),
             new BundleAnalyzerPlugin()
         ],
@@ -82,7 +78,7 @@ module.exports = () => {
             inline: true,
             hot: false,
             open: true,
-            contentBase: path.resolve(__dirname, 'out'),
+            contentBase: path.resolve(__dirname, 'node_modules/juijs-ui/dist'),
             watchContentBase: true
         }
     }

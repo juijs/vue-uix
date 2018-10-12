@@ -2,6 +2,7 @@
 
 import Vue from 'vue'
 
+// import UixCombo from '../src/components/combo'
 // import UixCombo from '../src/components/combo.classic'
 // Vue.component(UixCombo.name, UixCombo);
 
