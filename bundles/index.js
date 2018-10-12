@@ -9,7 +9,7 @@ import Vue from 'vue'
 import VueUix from '../src/main'
 Vue.use(VueUix, { theme: "dark" });
 
-var vm = new Vue({
+window.vm = new Vue({
     el: "#app",
     data: {
         items: [
@@ -18,11 +18,13 @@ var vm = new Vue({
             { text: "일본", value: "ja" },
             { text: "중국", value: "zh" },
             { text: "프랑스", value: "fr" }
-        ]
+        ],
+        value: "en",
+        active: false
     },
     methods: {
         onChangeEvent: function(data, e) {
-            console.log(data, e);
+            this.value = data.value;
         }
     }
 });
