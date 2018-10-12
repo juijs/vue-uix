@@ -1,9 +1,12 @@
 /* bundling type : vue + vue-uix + juijs */
 
 import Vue from 'vue'
-import UixCombo from '../src/components/combo'
 
-Vue.component(UixCombo.name, UixCombo);
+// import UixCombo from '../src/components/combo.classic'
+// Vue.component(UixCombo.name, UixCombo);
+
+import VueUix from '../src/main'
+Vue.use(VueUix, { theme: "dark" });
 
 var vm = new Vue({
     el: "#app",

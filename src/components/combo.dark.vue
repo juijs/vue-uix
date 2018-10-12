@@ -1,0 +1,16 @@
+<template src="./combo.html"></template>
+
+<script src="./combo.js"></script>
+
+<style scoped lang="less">
+    @import "~juijs-ui/src/styles/base/mixins.less";
+    @import "~juijs-ui/src/styles/common.less";
+    @import "~juijs-ui/src/styles/common.theme.less";
+    @import "~juijs-ui/src/styles/icon.less";
+    @import "~juijs-ui/src/styles/icon.theme.less";
+    @import "~juijs-ui/src/styles/button.less";
+    @import "~juijs-ui/src/styles/button.theme.less";
+    @import "~juijs-ui/src/styles/combo.less";
+    @import "~juijs-ui/src/styles/combo.theme.less";
+    @import "~juijs-ui/src/styles/theme/dark.less";
+</style>

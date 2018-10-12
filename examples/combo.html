@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="charset=utf-8;"/>
+    <link rel="stylesheet" href="../dist/vue-uix.dark.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.js"></script>
+    <script src="../dist/vue-uix.dark.js"></script>
+</head>
+<body>
+<div id="app">
+    <uix-combo :width="200" :items="items" @change="onChangeEvent"></uix-combo>
+</div>
+<script>
+    var vm = new Vue({
+        el: "#app",
+        data: {
+            items: [
+                { text: "한국", value: "ko" },
+                { text: "미국", value: "en" },
+                { text: "일본", value: "ja" },
+                { text: "중국", value: "zh" },
+                { text: "프랑스", value: "fr" }
+            ]
+        },
+        methods: {
+            onChangeEvent: function(data, e) {
+                console.log(data, e);
+            }
+        }
+    });
+</script>
+</body>
+</html>

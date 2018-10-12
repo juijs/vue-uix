@@ -18,7 +18,8 @@
   "scripts": {
     "start": "npm run dev",
     "dev": "webpack-dev-server --env dev",
-    "prod": "webpack --env prod"
+    "prod:classic": "webpack --env=prod",
+    "prod:dark": "webpack --env=prod"
   },
   "keywords": [
     "vue",

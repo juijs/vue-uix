@@ -1,0 +1,7 @@
+<div class="combo">
+    <a :class="[ 'btn', size ]">{{ title }}</a>
+    <a :class="[ 'btn', 'toggle', size ]"><i class="icon-arrow2"></i></a>
+    <ul>
+        <li v-for="item in items"><a href="#" :value="item.value">{{ item.text }}</a></li>
+    </ul>
+</div>
