@@ -107,5 +107,7 @@ export default {
                 }
             }
         });
+
+        if(this.active) this.uix.open();
     }
 }

@@ -1,0 +1,6 @@
+<div :class="[ 'dropdown', size ]">
+    <div class="anchor" :v-show="anchor"></div>
+    <ul>
+        <li v-for="item in items" :class="item.divider ? 'divider' : ''" :value="item.index">{{ item.text }}</li>
+    </ul>
+</div>

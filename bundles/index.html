@@ -8,8 +8,9 @@
 <!-- TODO: When the page is already loaded with the JUI style -->
 <!--<body class="jui">-->
 <body>
-<div id="app" style="width: 500px;">
-    <uix-switch :checked="checked" :size="'small'" @change="onChangeEvent"></uix-switch>
+<div id="app">
+    <button @click="onClickButtonEvent">Click</button>
+    <uix-dropdown :items="items" :active="active" @change="onChangeEvent" :width="200" :keydown="true"></uix-dropdown>
 </div>
 </body>
 </html>

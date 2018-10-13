@@ -8,6 +8,7 @@ export default {
         const UixDatePicker = require(`./components/datepicker${UixTheme}.vue`);
         const UixCalendar = require(`./components/calendar${UixTheme}.vue`);
         const UixSwitch = require(`./components/switch${UixTheme}.vue`);
+        const UixDropdown = require(`./components/dropdown${UixTheme}.vue`);
 
         Vue.component(UixModal.default.name, UixModal.default);
         Vue.component(UixCombo.default.name, UixCombo.default);
@@ -16,5 +17,6 @@ export default {
         Vue.component(UixDatePicker.default.name, UixDatePicker.default);
         Vue.component(UixCalendar.default.name, UixCalendar.default);
         Vue.component(UixSwitch.default.name, UixSwitch.default);
+        Vue.component(UixDropdown.default.name, UixDropdown.default);
     }
 }

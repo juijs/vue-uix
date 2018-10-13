@@ -38,7 +38,7 @@ export default {
         autoHide: {
             type: Boolean,
             required: false,
-            default: true
+            default: false
         }
     },
     watch: {
@@ -60,5 +60,10 @@ export default {
             clone: this.clone,
             autoHide: this.autoHide
         });
+
+        if(this.active) {
+            this.uix.show();
+            this.uix.resize();
+        }
     }
 }

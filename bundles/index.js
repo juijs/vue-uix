@@ -12,11 +12,23 @@ Vue.use(VueUix, { theme: "classic" });
 window.vm = new Vue({
     el: "#app",
     data: {
-        checked: false
+        items: [
+            { text: "한국", index: 0 },
+            { text: "미국", index: 1 },
+            { text: "일본", index: 2 },
+            { text: "중국", index: 3 },
+            { text: "프랑스", index: 4 }
+        ],
+        index: 1,
+        active: true
     },
     methods: {
-        onChangeEvent: function(value, e) {
-            this.checked = value;
+        onChangeEvent: function(data, e) {
+            this.index = data.index;
+            alert(data.text);
+        },
+        onClickButtonEvent: function() {
+            this.active = !this.active;
         }
     }
 });

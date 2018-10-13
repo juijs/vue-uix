@@ -16,31 +16,30 @@
 <!--<body class="jui">-->
 <body>
 <div id="app">
-    <div id="child" style="width: 100%; height: 200px;">
-        <uix-combo :width="200" :items="items" :value="value" @change="onChangeEvent"></uix-combo>
-    </div>
-
-    <!-- Related modal elements -->
-    <h1 id="title" style="display: none;">HI</h1>
-    <uix-modal :root="'#child'" :target="'#title'" :active="modalActive"></uix-modal>
+    <button @click="onClickButtonEvent">Click</button>
+    <uix-dropdown :items="items" :active="active" @change="onChangeEvent" :width="200" :keydown="true"></uix-dropdown>
 </div>
 <script>
     window.vm = new Vue({
         el: "#app",
         data: {
-            modalActive: true,
             items: [
-                { text: "한국", value: "ko" },
-                { text: "미국", value: "en" },
-                { text: "일본", value: "ja" },
-                { text: "중국", value: "zh" },
-                { text: "프랑스", value: "fr" }
+                { text: "한국", index: 0 },
+                { text: "미국", index: 1 },
+                { text: "일본", index: 2 },
+                { text: "중국", index: 3 },
+                { text: "프랑스", index: 4 }
             ],
-            value: "en"
+            index: 1,
+            active: true
         },
         methods: {
             onChangeEvent: function(data, e) {
-                this.value = data.value;
+                this.index = data.index;
+                alert(data.text);
+            },
+            onClickButtonEvent: function() {
+                this.active = !this.active;
             }
         }
     });
