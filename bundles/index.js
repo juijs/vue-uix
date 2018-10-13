@@ -12,20 +12,28 @@ Vue.use(VueUix, { theme: "classic" });
 window.vm = new Vue({
     el: "#app",
     data: {
-        items: [
-            { text: "Java" },
-            { text: "JavaScript" },
-            { text: "CSS" },
-            { text: "SCSS" }
-        ],
-        index: 1,
-        disable: []
+        now: "2018/09/01",
+        width: 500,
+        height: 500,
+        template: "<td><! if(type != \"none\") { !>\n" +
+            "        <! if(day == 0) { !>\n" +
+            "        <span style=\"color: red;\"><!= date !></span>\n" +
+            "        <! } else if(day == 6) { !>\n" +
+            "        <span style=\"color: blue;\"><!= date !></span>\n" +
+            "        <! } else { !>\n" +
+            "        <span><!= date !></span>\n" +
+            "        <! } !>\n" +
+            "    <! } !></td>"
     },
     methods: {
-        onChangeEvent: function(data, e) {
-            this.index = data.index;
-
-            console.log(data.index)
+        onChangeEvent: function(date, e) {
+            this.now = date;
+        },
+        onPrevEvent: function(e) {
+            console.log("prev");
+        },
+        onNextEvent: function(e) {
+            console.log("next");
         }
     }
 });

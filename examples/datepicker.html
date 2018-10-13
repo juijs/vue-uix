@@ -5,7 +5,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.js"></script>
 
     <!-- TODO: When there is no dependency on the JUI style, load the script for that theme -->
-    <script src="../dist/vue-uix.classic.js"></script>
+    <script src="../dist/vue-uix.dark.js"></script>
     <link rel="stylesheet" href="../dist/vue-uix.css" />
 
     <!-- TODO: When the page is already loaded with the JUI style -->
@@ -16,31 +16,23 @@
 <!--<body class="jui">-->
 <body>
 <div id="app">
-    <div id="child" style="width: 100%; height: 200px;">
-        <uix-combo :width="200" :items="items" :value="value" @change="onChangeEvent"></uix-combo>
-    </div>
-
-    <!-- Related modal elements -->
-    <h1 id="title" style="display: none;">HI</h1>
-    <uix-modal :root="'#child'" :target="'#title'" :active="modalActive"></uix-modal>
+    <uix-datepicker :date="now" :date-format="'yyyy/MM/dd'" @change="onChangeEvent" @prev="onPrevEvent" @next="onNextEvent"></uix-datepicker>
 </div>
 <script>
     window.vm = new Vue({
         el: "#app",
         data: {
-            modalActive: false,
-            items: [
-                { text: "한국", value: "ko" },
-                { text: "미국", value: "en" },
-                { text: "일본", value: "ja" },
-                { text: "중국", value: "zh" },
-                { text: "프랑스", value: "fr" }
-            ],
-            value: "en"
+            now: "2018/09/01"
         },
         methods: {
-            onChangeEvent: function(data, e) {
-                this.value = data.value;
+            onChangeEvent: function(date, e) {
+                this.now = date;
+            },
+            onPrevEvent: function(e) {
+                console.log("prev");
+            },
+            onNextEvent: function(e) {
+                console.log("next");
             }
         }
     });

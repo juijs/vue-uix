@@ -9,20 +9,8 @@
 <!--<body class="jui">-->
 <body>
 <div id="app" style="width: 500px;">
-    <uix-tab :items="items" :index="index" :disable="disable" @change="onChangeEvent"></uix-tab>
-
-    <div v-if="index === 0">
-        Java
-    </div>
-    <div v-else-if="index === 1">
-        JavaScript
-    </div>
-    <div v-else-if="index === 2">
-        CSS
-    </div>
-    <div v-else>
-        SCSS
-    </div>
+    <uix-calendar :template="template" :width="width" :height="height" :date="now" :date-format="'yyyy/MM/dd'"
+                  @change="onChangeEvent" @prev="onPrevEvent" @next="onNextEvent"></uix-calendar>
 </div>
 </body>
 </html>
