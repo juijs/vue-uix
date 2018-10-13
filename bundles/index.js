@@ -12,11 +12,20 @@ Vue.use(VueUix, { theme: "classic" });
 window.vm = new Vue({
     el: "#app",
     data: {
-        active: false
+        items: [
+            { text: "Java" },
+            { text: "JavaScript" },
+            { text: "CSS" },
+            { text: "SCSS" }
+        ],
+        index: 1,
+        disable: []
     },
     methods: {
         onChangeEvent: function(data, e) {
-            this.value = data.value;
+            this.index = data.index;
+
+            console.log(data.index)
         }
     }
 });

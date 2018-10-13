@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.js"></script>
+
+    <!-- TODO: When there is no dependency on the JUI style, load the script for that theme -->
+    <script src="../dist/vue-uix.classic.js"></script>
+    <link rel="stylesheet" href="../dist/vue-uix.css" />
+
+    <!-- TODO: When the page is already loaded with the JUI style -->
+    <!--<script src="../dist/vue-uix.base.js"></script>-->
+    <!--<link rel="stylesheet" href="../node_modules/juijs-ui/dist/jui-ui.classic.css" />-->
+</head>
+<!-- TODO: When the page is already loaded with the JUI style -->
+<!--<body class="jui">-->
+<body>
+<div id="app">
+    <uix-tab :items="tabs" :index="tabIndex" @change="onChangeTab"></uix-tab>
+
+    <div v-if="tabIndex === 0">
+        <uix-button :items="buttons" :type="'check'"></uix-button>
+    </div>
+    <div v-else-if="tabIndex === 1">
+        JavaScript
+    </div>
+    <div v-else-if="tabIndex === 2">
+        CSS
+    </div>
+    <div v-else>
+        SCSS
+    </div>
+</div>
+<script>
+    window.vm = new Vue({
+        el: "#app",
+        data: {
+            // tab options
+            tabs: [
+                { text: "Java" },
+                { text: "JavaScript" },
+                { text: "CSS" },
+                { text: "SCSS" }
+            ],
+            tabIndex: 1,
+
+            // button options
+            buttons: [
+                { icon: "", text: "A", value: "1", style: { width: "70px" } },
+                { icon: "", text: "B", value: "2", style: { width: "70px" } },
+                { icon: "", text: "C", value: "3", style: { width: "70px" } },
+                { icon: "home", text: "Home", value: "home", focus: true },
+                { icon: "gear", text: "Gear", value: "gear" },
+                { icon: "help", text: "", value: "help" }
+            ]
+        },
+        methods: {
+            onChangeTab: function(data, e) {
+                this.tabIndex = data.index;
+            }
+        }
+    });
+</script>
+</body>
+</html>

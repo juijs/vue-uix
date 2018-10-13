@@ -9,9 +9,20 @@
 <!--<body class="jui">-->
 <body>
 <div id="app" style="width: 500px;">
-    <h1 id="title" style="display: none;">HI</h1>
-    <div id="child" style="width: 100%; height: 200px;"></div>
-    <uix-modal :root="'#child'" :target="'#title'" :active="active" :color="'red'"></uix-modal>
+    <uix-tab :items="items" :index="index" :disable="disable" @change="onChangeEvent"></uix-tab>
+
+    <div v-if="index === 0">
+        Java
+    </div>
+    <div v-else-if="index === 1">
+        JavaScript
+    </div>
+    <div v-else-if="index === 2">
+        CSS
+    </div>
+    <div v-else>
+        SCSS
+    </div>
 </div>
 </body>
 </html>
