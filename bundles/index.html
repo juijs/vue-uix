@@ -8,8 +8,10 @@
 <!-- TODO: When the page is already loaded with the JUI style -->
 <!--<body class="jui">-->
 <body>
-<div id="app">
-    <uix-button :items="items" :value="value" :size="'normal'" :type="'radio'" @change="onChangeEvent"></uix-button>
+<div id="app" style="width: 500px;">
+    <h1 id="title" style="display: none;">HI</h1>
+    <div id="child" style="width: 100%; height: 200px;"></div>
+    <uix-modal :root="'#child'" :target="'#title'" :active="active" :color="'red'"></uix-modal>
 </div>
 </body>
 </html>
