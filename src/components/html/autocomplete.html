@@ -1,0 +1,5 @@
+<div v-if="icon !== ''" class="group">
+    <label :class="[ 'label', size ]"><i :class="'icon-' + icon"></i></label>
+    <input type="text" :class="[ 'input', size ]" :style="style" :value="value" />
+</div>
+<input v-else type="text" :class="[ 'input', size ]" :style="style" :value="value" />
