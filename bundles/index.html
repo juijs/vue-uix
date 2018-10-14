@@ -9,8 +9,11 @@
 <!--<body class="jui">-->
 <body>
 <div id="app">
-    <div id="contents" style="width: 800px; height: 400px; background: gray;"></div>
-    <uix-notification :root="'#contents'" :items="items" :icon="'help'" @change="onChangeEvent" @show="onShowEvent"></uix-notification>
+    <uix-accordion :items="items" :index="index" :type="'simple'" :auto-fold="true" :width="100" @open="onOpenEvent" @fold="onFoldEvent">
+        <div v-if="index === 0">Contents #0</div>
+        <div v-else-if="index === 1">Contents #1</div>
+        <div v-else-if="index === 2">Contents #2</div>
+    </uix-accordion>
 </div>
 </body>
 </html>

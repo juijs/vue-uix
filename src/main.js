@@ -13,6 +13,7 @@ export default {
         const UixColorPicker = require(`./components/colorpicker${UixTheme}.vue`);
         const UixTree = require(`./components/tree${UixTheme}.vue`);
         const UixNotification = require(`./components/notification${UixTheme}.vue`);
+        const UixAccordion = require(`./components/accordion${UixTheme}.vue`);
 
         Vue.component(UixModal.default.name, UixModal.default);
         Vue.component(UixCombo.default.name, UixCombo.default);
@@ -26,5 +27,6 @@ export default {
         Vue.component(UixColorPicker.default.name, UixColorPicker.default);
         Vue.component(UixTree.default.name, UixTree.default);
         Vue.component(UixNotification.default.name, UixNotification.default);
+        Vue.component(UixAccordion.default.name, UixAccordion.default);
     }
 }

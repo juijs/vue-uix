@@ -13,16 +13,18 @@ window.vm = new Vue({
     el: "#app",
     data: {
         items: [
-            // status : normal, info, warning, danger
-            { status: "danger", title: "Caution message Send!!!", message: "Feb 15, 2013-12-24 02:24:19" }
-        ]
+            "Group Item #1",
+            "Group Item #2",
+            "Group Item #3"
+        ],
+        index: 0
     },
     methods: {
-        onChangeEvent: function(item, e) {
-            console.log(item, e);
+        onOpenEvent: function(index, e) {
+            this.index = index;
         },
-        onShowEvent: function(item) {
-            console.log(item);
+        onFoldEvent: function(index, e) {
+            this.index = null;
         }
     }
 });

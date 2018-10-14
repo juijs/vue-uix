@@ -1,0 +1,8 @@
+<div :class="[ 'accordion', type ]" :style="style">
+    <div v-for="item in items" class="title">
+        {{ item }} <i class="icon-arrow1"></i>
+    </div>
+    <div class="content">
+        <slot></slot>
+    </div>
+</div>
