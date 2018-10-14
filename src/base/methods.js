@@ -1,3 +1,5 @@
+import $ from "jquery";
+
 export default {
     methods: {
         containValue: function(value) {
@@ -8,6 +10,13 @@ export default {
             }
 
             return false;
+        },
+        replaceScopedHash: function(selector) {
+            const self = this;
+
+            $(this.uix.root).find(selector).each(function() {
+                $(this).attr(self.$options._scopeId, true)
+            });
         }
     }
 }

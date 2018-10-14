@@ -1,4 +1,4 @@
-import $ from 'jquery'
+import methods from '../../base/methods'
 import JUI from 'juijs-ui'
 import ColorPickerComp from 'juijs-ui/src/components/colorpicker'
 
@@ -6,6 +6,7 @@ JUI.use(ColorPickerComp);
 
 export default {
     name: 'uix-colorpicker',
+    mixins: [ methods ],
     props: {
         color: {
             type: [ String, Object ],
@@ -33,8 +34,6 @@ export default {
         });
 
         // 내부 마크업에 스타일 스코프 설정하기
-        $(this.uix.root).find("input,div").each(function() {
-            $(this).attr(self.$options._scopeId, true)
-        });
+        this.replaceScopedHash("input.div");
     }
 }

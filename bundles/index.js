@@ -9,14 +9,22 @@ import Vue from 'vue'
 import VueUix from '../src/main'
 Vue.use(VueUix, { theme: "classic" });
 
+const data = [
+    { index: "0", text: "Windows" },
+    { index: "0.0", text: "dll" },
+    { index: "0.1", text: "zip" },
+    { index: "1", text: "Download" }
+];
+
 window.vm = new Vue({
     el: "#app",
     data: {
-        color: '#000'
+        items: data,
+        item: data[2]
     },
     methods: {
-        onChangeEvent: function(hex, rgb) {
-            this.color = hex;
+        onChangeEvent: function(item, e) {
+            this.item = item;
         }
     }
 });
