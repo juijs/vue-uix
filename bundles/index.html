@@ -9,7 +9,8 @@
 <!--<body class="jui">-->
 <body>
 <div id="app">
-    <uix-tree :root-name="'C:\\'" :items="items" :item="item" @change="onChangeEvent"></uix-tree>
+    <div id="contents" style="width: 800px; height: 400px; background: gray;"></div>
+    <uix-notification :root="'#contents'" :items="items" :icon="'help'" @change="onChangeEvent" @show="onShowEvent"></uix-notification>
 </div>
 </body>
 </html>

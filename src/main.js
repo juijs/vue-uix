@@ -12,6 +12,7 @@ export default {
         const UixAutocomplete = require(`./components/autocomplete${UixTheme}.vue`);
         const UixColorPicker = require(`./components/colorpicker${UixTheme}.vue`);
         const UixTree = require(`./components/tree${UixTheme}.vue`);
+        const UixNotification = require(`./components/notification${UixTheme}.vue`);
 
         Vue.component(UixModal.default.name, UixModal.default);
         Vue.component(UixCombo.default.name, UixCombo.default);
@@ -24,5 +25,6 @@ export default {
         Vue.component(UixAutocomplete.default.name, UixAutocomplete.default);
         Vue.component(UixColorPicker.default.name, UixColorPicker.default);
         Vue.component(UixTree.default.name, UixTree.default);
+        Vue.component(UixNotification.default.name, UixNotification.default);
     }
 }

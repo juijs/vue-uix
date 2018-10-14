@@ -9,22 +9,20 @@ import Vue from 'vue'
 import VueUix from '../src/main'
 Vue.use(VueUix, { theme: "classic" });
 
-const data = [
-    { index: "0", text: "Windows" },
-    { index: "0.0", text: "dll" },
-    { index: "0.1", text: "zip" },
-    { index: "1", text: "Download" }
-];
-
 window.vm = new Vue({
     el: "#app",
     data: {
-        items: data,
-        item: data[2]
+        items: [
+            // status : normal, info, warning, danger
+            { status: "danger", title: "Caution message Send!!!", message: "Feb 15, 2013-12-24 02:24:19" }
+        ]
     },
     methods: {
         onChangeEvent: function(item, e) {
-            this.item = item;
+            console.log(item, e);
+        },
+        onShowEvent: function(item) {
+            console.log(item);
         }
     }
 });

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.js"></script>
+
+    <!-- TODO: When there is no dependency on the JUI style, load the script for that theme -->
+    <script src="../dist/vue-uix.classic.js"></script>
+    <link rel="stylesheet" href="../dist/vue-uix.css" />
+
+    <!-- TODO: When the page is already loaded with the JUI style -->
+    <!--<script src="../dist/vue-uix.base.js"></script>-->
+    <!--<link rel="stylesheet" href="../node_modules/juijs-ui/dist/jui-ui.classic.css" />-->
+</head>
+<!-- TODO: When the page is already loaded with the JUI style -->
+<!--<body class="jui">-->
+<body>
+<div id="app">
+    <div id="contents" style="width: 500px; height: 300px; background: gray;"></div>
+    <uix-notification :root="'#contents'" :items="items" :icon="'help'" @change="onChangeEvent" @show="onShowEvent"></uix-notification>
+</div>
+<script>
+    window.vm = new Vue({
+        el: "#app",
+        data: {
+            items: [
+                // status : normal, info, warning, danger
+                { status: "danger", title: "Caution message Send!!!", message: "Feb 15, 2013-12-24 02:24:19" }
+            ]
+        },
+        methods: {
+            onChangeEvent: function(item, e) {
+                console.log(item, e);
+            },
+            onShowEvent: function(item) {
+                console.log(item);
+            }
+        }
+    });
+</script>
+</body>
+</html>
