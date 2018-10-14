@@ -13,22 +13,34 @@ window.vm = new Vue({
     el: "#app",
     data: {
         items: [
-            { text: "한국", index: 0 },
-            { text: "미국", index: 1 },
-            { text: "일본", index: 2 },
-            { text: "중국", index: 3 },
-            { text: "프랑스", index: 4 }
+            "ActionScript",
+            "AppleScript",
+            "Asp",
+            "BASIC",
+            "C",
+            "C++",
+            "Clojure",
+            "COBOL",
+            "ColdFusion",
+            "Erlang",
+            "Fortran",
+            "Groovy",
+            "Haskell",
+            "Java",
+            "JavaScript",
+            "Lisp",
+            "Perl",
+            "PHP",
+            "Python",
+            "Ruby",
+            "Scala",
+            "Scheme"
         ],
-        index: 1,
-        active: true
+        value: ''
     },
     methods: {
-        onChangeEvent: function(data, e) {
-            this.index = data.index;
-            alert(data.text);
-        },
-        onClickButtonEvent: function() {
-            this.active = !this.active;
+        onChangeEvent: function(value, e) {
+            this.value = value;
         }
     }
 });

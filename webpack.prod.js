@@ -58,8 +58,8 @@ module.exports = (theme) => {
                 filename: '[name].css',
             }),
             new OptimizeCssAssetsPlugin(),
-            new VueLoaderPlugin(),
-            new BundleAnalyzerPlugin()
+            new VueLoaderPlugin()
+            // , new BundleAnalyzerPlugin()
         ],
         resolve: {
             extensions: ['*', '.js', '.vue', '.json', '.less']

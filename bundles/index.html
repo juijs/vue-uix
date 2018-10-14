@@ -9,8 +9,7 @@
 <!--<body class="jui">-->
 <body>
 <div id="app">
-    <button @click="onClickButtonEvent">Click</button>
-    <uix-dropdown :items="items" :active="active" @change="onChangeEvent" :width="200" :keydown="true"></uix-dropdown>
+    <uix-autocomplete :items="items" :icon="'search'" :value="value" @change="onChangeEvent"></uix-autocomplete>
 </div>
 </body>
 </html>
