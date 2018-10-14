@@ -12,35 +12,11 @@ Vue.use(VueUix, { theme: "classic" });
 window.vm = new Vue({
     el: "#app",
     data: {
-        items: [
-            "ActionScript",
-            "AppleScript",
-            "Asp",
-            "BASIC",
-            "C",
-            "C++",
-            "Clojure",
-            "COBOL",
-            "ColdFusion",
-            "Erlang",
-            "Fortran",
-            "Groovy",
-            "Haskell",
-            "Java",
-            "JavaScript",
-            "Lisp",
-            "Perl",
-            "PHP",
-            "Python",
-            "Ruby",
-            "Scala",
-            "Scheme"
-        ],
-        value: ''
+        color: '#000'
     },
     methods: {
-        onChangeEvent: function(value, e) {
-            this.value = value;
+        onChangeEvent: function(hex, rgb) {
+            this.color = hex;
         }
     }
 });

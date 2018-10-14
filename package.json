@@ -65,6 +65,7 @@
     "webpack-node-externals": "^1.7.2"
   },
   "dependencies": {
+    "jquery": "^3.3.1",
     "juijs-ui": "^2.2.1-es6",
     "vue": "^2.5.17"
   }
