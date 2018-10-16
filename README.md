@@ -237,3 +237,28 @@ Vue.component(UixCombo.name, UixCombo);
 | opacity | Number | false | false | 0.4 | Background opacity of modal |
 | zIndex | Number | false | false | 0 | Z-index value of modal |
 | autoHide | Boolean | false | false | false | Option to automatically hide modal on background clicking |
+
+
+### Notification
+
+#### Props
+
+| Name | Type | Required | Watch | Default | Description |
+| ---- | ---- | -------- | ----- | ------- | ----------- |
+| root | String | false | true | `null` | Selector for the modal background element |
+| position | String | false | false | `bottom` | Option to set where the drop-down menu is shown (**top**, **bottom**) |
+| items | String | false | true | `undefined` | Item list of drop-down menu |
+| template | String | false | false | `<td><!= date !></td>` | A template for markup that prints out the date |
+| icon | String | false | false | `` | When you want to use the icon, you can set the name of the icon provided by [JUI](http://uiplay.jui.io/?p=icons) (However, you do not need to use the prefix 'icon-') |
+| delay | Number | false | false | 3000 | After the notification is shown, delay time |
+| showDuration | Number | false | false | 500 | Duration of effect in which notifications are shown |
+| hideDuration | Number | false | false | 500 | Duration of effect in which notifications are hidden |
+| padding | Number | false | false | 12 | Padding between notification and notification |
+| distance | Number | false | false | 5 | Distance between notification and notification |
+
+
+#### Events
+
+| Name | Arguments | Description |
+| ---- | --------- | ----------- |
+| change | item, event | Events that occur when you select a item |
