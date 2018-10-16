@@ -274,7 +274,7 @@ Vue.component(UixCombo.name, UixCombo);
 | ---- | ---- | -------- | ----- | ------- | ----------- |
 | inside | Boolean | false | false | true | Sets the inside style option for the switch |
 | size | String | false | false | `small` | The size styles of the component (**mini**, **small**, **large**) |
-| checked | Boolean | false | false | false | Set the check state of the switch |
+| checked | Boolean | false | false | false | Sets the check state of the switch |
 
 
 #### Events
@@ -302,3 +302,26 @@ Vue.component(UixCombo.name, UixCombo);
 | Name | Arguments | Description |
 | ---- | --------- | ----------- |
 | change | checked, event | Events that occur when you change a activated tab |
+
+
+### Tree
+
+#### Props
+
+| Name | Type | Required | Watch | Default | Description |
+| ---- | ---- | -------- | ----- | ------- | ----------- |
+| type | String | false | false | `line` | Set tree style type (**line**, **line-file**, **arrow**, **arow-file**) |
+| rootName | String | false | false | `null` | Sets the name of the root node |
+| rootHide | Boolean | false | false | false | Option to hide root node by default |
+| rootFold | Boolean | false | false | false | Option to hide fold node by default |
+| template | String | false | false | `<li><div><i></i> <!= text !></div><ul></ul></li>` | A template for markup that prints out the node |
+| items | Array | false | true | `undefined` | Node list of tree |
+| item | Object | false | true | `null` | Sets the node to be activated |
+
+#### Events
+
+| Name | Arguments | Description |
+| ---- | --------- | ----------- |
+| change | item, event | Events that occur when you select a node |
+| open | item, event | Events that occur when the child nodes of the selected node are opened |
+| fold | item, event | Events that occur when the child nodes of the selected node are folded |
