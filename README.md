@@ -66,7 +66,9 @@ import UixCombo from 'vue-uix/src/components/combo.classic'
 Vue.component(UixCombo.name, UixCombo);
 ```
 
+
 ## API
+
 
 ### Accordion
 
@@ -105,3 +107,22 @@ Vue.component(UixCombo.name, UixCombo);
 | Name | Arguments | Description |
 | ---- | --------- | ----------- |
 | change | text, event | Events that occur when you select a word in the Auto-complete list |
+
+
+### Button
+
+#### Props
+
+| Name | Type | Required | Watch | Default | Description |
+| ---- | ---- | -------- | ----- | ------- | ----------- |
+| type | String | false | false | `radio` | It is a button selection option. Radio is single and Check is multi-selectable. (**check**) |
+| index | Number | false | true | 0 | Sets the initially selected item index |
+| value | String, Array | false | true | `` | Selected value. Radio is string type, Check is array type |
+| size | String | false | false | `small` | The size styles of the component (**mini**, **large**) |
+| items | Array | true | true | `undefined` | Button list |
+
+#### Events
+
+| Name | Arguments | Description |
+| ---- | --------- | ----------- |
+| change | text, event | Events that occur when you click a button |
