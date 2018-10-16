@@ -86,3 +86,22 @@ Vue.component(UixCombo.name, UixCombo);
 | ---- | --------- | ----------- |
 | open | index | Events that occur when an accordion content is opened |
 | fold | index | Events that occur when an accordion content is closed |
+
+### Autocomplete
+
+#### Props
+
+| Name | Type | Required | Watch | Default | Description |
+| ---- | ---- | -------- | ----- | ------- | ----------- |
+| icon | String | false | false | `` | When you want to use the icon, you can set the name of the icon provided by [JUI](http://uiplay.jui.io/?p=icons) (However, you do not need to use the prefix 'icon-') |
+| width | Number | false | true | 150 | The width of the accordion component |
+| size | String | false | false | `small` | The width of the accordion component (**mini**, **large**) |
+| template | String | false | false | `skip...` |
+| items | Array | true | true | `undefined` | A list of accordion headers |
+| value | String | false | false | `` | Hide the content area when you click on the active accordion header again |
+
+#### Events
+
+| Name | Arguments | Description |
+| ---- | --------- | ----------- |
+| open | index | Events that occur when an accordion content is opened |
