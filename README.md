@@ -160,7 +160,7 @@ Vue.component(UixCombo.name, UixCombo);
 | flex | Boolean | false | false | true | Option that match the width of the drop-down menu to the width of the combo box |
 | position | String | false | false | `bottom` | Option to set where the drop-down menu is shown (**top**, **bottom**) |
 | title | String | false | false | `Selected...` | When there are no items, the default message shown in the combo box |
-| items | String | false | false | `bottom` | Item list of combo box |
+| items | Array | false | false | `null` | Item list of combo box |
 | active | String | false | true | false | Options showing a drop-down menu |
 
 #### Events
@@ -198,3 +198,27 @@ Vue.component(UixCombo.name, UixCombo);
 | ---- | ---- | -------- | ----- | ------- | ----------- |
 | width | String, Number | false | false | `100%` | Set calendar width |
 | height | String, Number | false | false | `100%` | Set calendar height |
+
+
+### Dropdown
+
+#### Props
+
+| Name | Type | Required | Watch | Default | Description |
+| ---- | ---- | -------- | ----- | ------- | ----------- |
+| index | Number | false | false | 0 | Sets the item to be activated |
+| width | Number | false | false | 100 | The width of the component |
+| height | Number | false | false | 100 | The height of the component |
+| left | Number | false | false | 0 | The left position value of the component |
+| top | Number | false | false | 0 | The top position value of the component |
+| size | String | false | false | `small` | The size styles of the component (**mini**, **small**, **large**) |
+| keydown | Boolean | false | false | false | Option to select items with up/down arrow keys |
+| items | String | false | true | `undefined` | Item list of drop-down menu |
+| active | Boolean | false | true | false | Options showing a drop-down menu |
+| anchor | Boolean | false | false | false | Set options to display anchor style |
+
+#### Events
+
+| Name | Arguments | Description |
+| ---- | --------- | ----------- |
+| change | item, event | Events that occur when you select a item |
