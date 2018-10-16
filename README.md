@@ -188,3 +188,13 @@ Vue.component(UixCombo.name, UixCombo);
 | change | dateStr, event | Events that occur when you select a date |
 | prev | event | Events that occur when you change to the previous month |
 | next | event | Events that occur when you change to the next month |
+
+
+### Calendar (extends Date Picker)
+
+#### Props
+
+| Name | Type | Required | Watch | Default | Description |
+| ---- | ---- | -------- | ----- | ------- | ----------- |
+| width | String, Number | false | false | `100%` | Set calendar width |
+| height | String, Number | false | false | `100%` | Set calendar height |
