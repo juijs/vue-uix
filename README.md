@@ -66,9 +66,11 @@ import UixCombo from 'vue-uix/src/components/combo.classic'
 Vue.component(UixCombo.name, UixCombo);
 ```
 
-## Accordion
+## API
 
-### Props
+### Accordion
+
+#### Props
 
 | Name | Type | Required | Watch | Default | Description |
 | ---- | ---- | -------- | ----- | ------- | ----------- |
@@ -78,7 +80,7 @@ Vue.component(UixCombo.name, UixCombo);
 | autoFold | Boolean | false | false | false | Hide the content area when you click on the active accordion header again |
 | width | Number, String | false | true | `100%` | The width of the accordion component |
 
-### Events
+#### Events
 
 | Name | Arguments | Description |
 | ---- | --------- | ----------- |
