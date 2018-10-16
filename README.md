@@ -264,3 +264,21 @@ Vue.component(UixCombo.name, UixCombo);
 | change | item, event | Events that occur when you select a item |
 | show | index | Events that occur when an notification is shown |
 | hide | index | Events that occur when an notification is hidden |
+
+
+### Switch
+
+#### Props
+
+| Name | Type | Required | Watch | Default | Description |
+| ---- | ---- | -------- | ----- | ------- | ----------- |
+| inside | Boolean | false | false | true | Sets the inside style option for the switch |
+| size | String | false | false | `small` | The size styles of the component (**mini**, **small**, **large**) |
+| checked | Boolean | false | false | false | Set the check state of the switch |
+
+
+#### Events
+
+| Name | Arguments | Description |
+| ---- | --------- | ----------- |
+| change | checked, event | Events that occur when you change a switch |
