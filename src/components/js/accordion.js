@@ -57,7 +57,7 @@ export default {
                     if(!e) return;
 
                     $(e.target).find("i").attr("class", "icon-arrow1");
-                    self.$emit("open", index, e);
+                    self.$emit("fold", index, e);
                 }
             }
         });
