@@ -117,7 +117,7 @@ Vue.component(UixCombo.name, UixCombo);
 
 | Name | Type | Required | Watch | Default | Description |
 | ---- | ---- | -------- | ----- | ------- | ----------- |
-| type | String | false | false | `radio` | It is a button selection option. Radio is single and Check is multi-selectable. (**check**) |
+| type | String | false | false | `radio` | It is a button selection option. Radio is single and Check is multi-selectable. (**radio**, **check**) |
 | index | Number | false | true | 0 | Sets the button to be activated |
 | value | String, Array | false | true | `` | Selected value. Radio is string type, Check is array type |
 | size | String | false | false | `small` | The size styles of the component (**mini**, **small**, **large**) |
@@ -247,7 +247,7 @@ Vue.component(UixCombo.name, UixCombo);
 | ---- | ---- | -------- | ----- | ------- | ----------- |
 | root | String | false | true | `null` | Selector for the modal background element |
 | position | String | false | false | `bottom` | Option to set where the drop-down menu is shown (**top**, **bottom**) |
-| items | String | false | true | `undefined` | Item list of drop-down menu |
+| items | Array | false | true | `undefined` | Item list of drop-down menu |
 | template | String | false | false | `<td><!= date !></td>` | A template for markup that prints out the date |
 | icon | String | false | false | `` | When you want to use the icon, you can set the name of the icon provided by [JUI](http://uiplay.jui.io/?p=icons) (However, you do not need to use the prefix 'icon-') |
 | delay | Number | false | false | 3000 | After the notification is shown, delay time |
@@ -282,3 +282,23 @@ Vue.component(UixCombo.name, UixCombo);
 | Name | Arguments | Description |
 | ---- | --------- | ----------- |
 | change | checked, event | Events that occur when you change a switch |
+
+
+### Tab
+
+#### Props
+
+| Name | Type | Required | Watch | Default | Description |
+| ---- | ---- | -------- | ----- | ------- | ----------- |
+| type | String | false | false | `tab` | Set tab style type (**tab**, **pill**) |
+| position | String | false | false | `top` | Sets the position of the tab (**top**, **bottom**) |
+| items | Array | false | true | `undefined` | Item list of tab |
+| index | Number | false | true | 0 | Sets the item to be activated |
+| disable | Array | false | true | `null` | Sets the index of the tab to be disabled |
+
+
+#### Events
+
+| Name | Arguments | Description |
+| ---- | --------- | ----------- |
+| change | checked, event | Events that occur when you change a activated tab |
