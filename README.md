@@ -167,3 +167,23 @@ Vue.component(UixCombo.name, UixCombo);
 | Name | Arguments | Description |
 | ---- | --------- | ----------- |
 | change | item, event | Events that occur when you select a item |
+
+
+### Date Picker
+
+#### Props
+
+| Name | Type | Required | Watch | Default | Description |
+| ---- | ---- | -------- | ----- | ------- | ----------- |
+| titleFormat | String | false | false | `yyyy.MM` | Set the current year/month title format |
+| dateFormat | String | false | false | `yyyy-MM-dd` | Set the format for selected date |
+| date | String | false | true | null | Set the | Select the default date |
+| template | String | false | false | `<td><!= date !></td>` | A template for markup that prints out the date |
+
+#### Events
+
+| Name | Arguments | Description |
+| ---- | --------- | ----------- |
+| change | dateStr, event | Events that occur when you select a date |
+| prev | event | Events that occur when you change to the previous month |
+| next | event | Events that occur when you change to the next month |
