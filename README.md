@@ -89,6 +89,7 @@ Vue.component(UixCombo.name, UixCombo);
 | open | index | Events that occur when an accordion content is opened |
 | fold | index | Events that occur when an accordion content is closed |
 
+
 ### Autocomplete
 
 #### Props
@@ -97,7 +98,7 @@ Vue.component(UixCombo.name, UixCombo);
 | ---- | ---- | -------- | ----- | ------- | ----------- |
 | icon | String | false | false | `` | When you want to use the icon, you can set the name of the icon provided by [JUI](http://uiplay.jui.io/?p=icons) (However, you do not need to use the prefix 'icon-') |
 | width | Number | false | true | 150 | The width of the component |
-| size | String | false | false | `small` | The size styles of the component (**mini**, **large**) |
+| size | String | false | false | `small` | The size styles of the component (**mini**, **small**, **large**) |
 | template | String | false | false | `skip...` | |
 | items | Array | true | true | `undefined` | Auto-complete word list |
 | value | String | false | false | `` | Props to set the selected word |
@@ -118,7 +119,7 @@ Vue.component(UixCombo.name, UixCombo);
 | type | String | false | false | `radio` | It is a button selection option. Radio is single and Check is multi-selectable. (**check**) |
 | index | Number | false | true | 0 | Sets the button to be activated |
 | value | String, Array | false | true | `` | Selected value. Radio is string type, Check is array type |
-| size | String | false | false | `small` | The size styles of the component (**mini**, **large**) |
+| size | String | false | false | `small` | The size styles of the component (**mini**, **small**, **large**) |
 | items | Array | true | true | `undefined` | Button list |
 
 #### Events
@@ -141,3 +142,28 @@ Vue.component(UixCombo.name, UixCombo);
 | Name | Arguments | Description |
 | ---- | --------- | ----------- |
 | change | hex, rgb | Events that occur when you select a color |
+
+
+### Combo
+
+#### Props
+
+| Name | Type | Required | Watch | Default | Description |
+| ---- | ---- | -------- | ----- | ------- | ----------- |
+| index | Number | false | true | 0 | Sets the item to be activated |
+| value | String | false | true | `` | Selected value |
+| width | Number | false | false | 100 | The width of the component |
+| height | Number | false | false | 100 | The width of the component |
+| size | String | false | false | `small` | The size styles of the component (**mini**, **small**, **large**) |
+| keydown | Boolean | false | false | false | Options to select items with up/down arrow keys |
+| flex | Boolean | false | false | true | Options that match the width of the drop-down menu to the width of the combo box |
+| position | String | false | false | `bottom` | Option to set where the drop-down menu is shown (**top**, **bottom**) |
+| title | String | false | false | `Selected...` | When there are no items, the default message shown in the combo box |
+| items | String | false | false | `bottom` | Item list of combo box |
+| active | String | false | true | false | Options showing a drop-down menu |
+
+#### Events
+
+| Name | Arguments | Description |
+| ---- | --------- | ----------- |
+| change | item, event | Events that occur when you select a item |
