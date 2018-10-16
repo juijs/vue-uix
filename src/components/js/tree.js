@@ -98,13 +98,13 @@ export default {
                 'open': function(node, e) {
                     if(!e) return;
 
-                    self.$emit('change', { index: node.index, text: node.data.text }, e);
+                    self.$emit('open', { index: node.index, text: node.data.text }, e);
                     self.replaceScopedHash("i");
                 },
                 'fold': function(node, e) {
                     if(!e) return;
 
-                    self.$emit('change', { index: node.index, text: node.data.text }, e);
+                    self.$emit('fold', { index: node.index, text: node.data.text }, e);
                     self.replaceScopedHash("i");
                 }
             },
