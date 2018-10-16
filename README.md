@@ -71,7 +71,7 @@ Vue.component(UixCombo.name, UixCombo);
 ### Props
 
 | Name | Type | Required | Watch | Default | Description |
-| ---------------- | -------------- | -------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| ---- | ---- | -------- | ----- | ------- | ----------- |
 | type | String | false | false | `` | Additional styles of accordion (**simple**) |
 | items | Array | true | false | `undefined` | A list of accordion headers |
 | index | Number | false | false | `null` | Sets the accordion header to be activated |
