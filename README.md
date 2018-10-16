@@ -51,9 +51,9 @@ If you are using an existing JUI style, You must load a non-styled view componen
 
 ```js
 import Vue from 'vue'
-import UixCombo from 'vue-uix/src/components/combo'
+import UixComboBox from 'vue-uix/src/components/combobox'
 
-Vue.component(UixCombo.name, UixCombo);
+Vue.component(UixComboBox.name, UixComboBox);
 ```
 
 ##### Components
