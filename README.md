@@ -78,7 +78,7 @@ Vue.component(UixCombo.name, UixCombo);
 | items | Array | true | false | `undefined` | A list of accordion headers |
 | index | Number | false | false | `null` | Sets the accordion header to be activated |
 | autoFold | Boolean | false | false | false | Hide the content area when you click on the active accordion header again |
-| width | Number, String | false | true | `100%` | The width of the accordion component |
+| width | Number, String | false | true | `100%` | The width of the component |
 
 #### Events
 
@@ -94,14 +94,14 @@ Vue.component(UixCombo.name, UixCombo);
 | Name | Type | Required | Watch | Default | Description |
 | ---- | ---- | -------- | ----- | ------- | ----------- |
 | icon | String | false | false | `` | When you want to use the icon, you can set the name of the icon provided by [JUI](http://uiplay.jui.io/?p=icons) (However, you do not need to use the prefix 'icon-') |
-| width | Number | false | true | 150 | The width of the accordion component |
-| size | String | false | false | `small` | The width of the accordion component (**mini**, **large**) |
-| template | String | false | false | `skip...` |
-| items | Array | true | true | `undefined` | A list of accordion headers |
-| value | String | false | false | `` | Hide the content area when you click on the active accordion header again |
+| width | Number | false | true | 150 | The width of the component |
+| size | String | false | false | `small` | The size styles of the component (**mini**, **large**) |
+| template | String | false | false | `skip...` | |
+| items | Array | true | true | `undefined` | Auto-complete word list |
+| value | String | false | false | `` | Props to set the selected word |
 
 #### Events
 
 | Name | Arguments | Description |
 | ---- | --------- | ----------- |
-| open | index | Events that occur when an accordion content is opened |
+| change | text, event | Events that occur when you select a word in the Auto-complete list |
