@@ -262,3 +262,5 @@ Vue.component(UixCombo.name, UixCombo);
 | Name | Arguments | Description |
 | ---- | --------- | ----------- |
 | change | item, event | Events that occur when you select a item |
+| show | index | Events that occur when an notification is shown |
+| hide | index | Events that occur when an notification is hidden |
