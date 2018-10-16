@@ -90,7 +90,7 @@ Vue.component(UixCombo.name, UixCombo);
 | fold | index | Events that occur when an accordion content is closed |
 
 
-### Autocomplete
+### Auto Complete
 
 #### Props
 
@@ -129,7 +129,7 @@ Vue.component(UixCombo.name, UixCombo);
 | change | item, event | Events that occur when you click a button |
 
 
-### Colorpicker
+### Color Picker
 
 #### Props
 
@@ -144,7 +144,7 @@ Vue.component(UixCombo.name, UixCombo);
 | change | hex, rgb | Events that occur when you select a color |
 
 
-### Combo
+### Combo Box
 
 #### Props
 
