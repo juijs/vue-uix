@@ -155,8 +155,8 @@ Vue.component(UixCombo.name, UixCombo);
 | width | Number | false | false | 100 | The width of the component |
 | height | Number | false | false | 100 | The width of the component |
 | size | String | false | false | `small` | The size styles of the component (**mini**, **small**, **large**) |
-| keydown | Boolean | false | false | false | Options to select items with up/down arrow keys |
-| flex | Boolean | false | false | true | Options that match the width of the drop-down menu to the width of the combo box |
+| keydown | Boolean | false | false | false | Option to select items with up/down arrow keys |
+| flex | Boolean | false | false | true | Option that match the width of the drop-down menu to the width of the combo box |
 | position | String | false | false | `bottom` | Option to set where the drop-down menu is shown (**top**, **bottom**) |
 | title | String | false | false | `Selected...` | When there are no items, the default message shown in the combo box |
 | items | String | false | false | `bottom` | Item list of combo box |
