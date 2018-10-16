@@ -5,6 +5,7 @@
 [![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)
 [![forthebadge](http://forthebadge.com/images/badges/made-with-vue.svg)](http://forthebadge.com)
 [![forthebadge](http://forthebadge.com/images/badges/uses-js.svg)](http://forthebadge.com)
+[![forthebadge](http://forthebadge.com/images/badges/uses-css.svg)](http://forthebadge.com)
 
 ## Installation
 
@@ -116,7 +117,7 @@ Vue.component(UixCombo.name, UixCombo);
 
 | Name | Type | Required | Watch | Default | Description |
 | ---- | ---- | -------- | ----- | ------- | ----------- |
-| type | String | false | false | `radio` | It is a button selection option. Radio is single and Check is multi-selectable. (**check**) |
+| type | String | false | false | `radio` | It is a button selection option. Radio is single and Check is multi-selectable. (**radio**, **check**) |
 | index | Number | false | true | 0 | Sets the button to be activated |
 | value | String, Array | false | true | `` | Selected value. Radio is string type, Check is array type |
 | size | String | false | false | `small` | The size styles of the component (**mini**, **small**, **large**) |
@@ -159,7 +160,7 @@ Vue.component(UixCombo.name, UixCombo);
 | flex | Boolean | false | false | true | Option that match the width of the drop-down menu to the width of the combo box |
 | position | String | false | false | `bottom` | Option to set where the drop-down menu is shown (**top**, **bottom**) |
 | title | String | false | false | `Selected...` | When there are no items, the default message shown in the combo box |
-| items | String | false | false | `bottom` | Item list of combo box |
+| items | Array | false | false | `null` | Item list of combo box |
 | active | String | false | true | false | Options showing a drop-down menu |
 
 #### Events
@@ -167,3 +168,160 @@ Vue.component(UixCombo.name, UixCombo);
 | Name | Arguments | Description |
 | ---- | --------- | ----------- |
 | change | item, event | Events that occur when you select a item |
+
+
+### Date Picker
+
+#### Props
+
+| Name | Type | Required | Watch | Default | Description |
+| ---- | ---- | -------- | ----- | ------- | ----------- |
+| titleFormat | String | false | false | `yyyy.MM` | Set the current year/month title format |
+| dateFormat | String | false | false | `yyyy-MM-dd` | Set the format for selected date |
+| date | String | false | true | null | Set the | Select the default date |
+| template | String | false | false | `<td><!= date !></td>` | A template for markup that prints out the date |
+
+#### Events
+
+| Name | Arguments | Description |
+| ---- | --------- | ----------- |
+| change | dateStr, event | Events that occur when you select a date |
+| prev | event | Events that occur when you change to the previous month |
+| next | event | Events that occur when you change to the next month |
+
+
+### Calendar (extends Date Picker)
+
+#### Props
+
+| Name | Type | Required | Watch | Default | Description |
+| ---- | ---- | -------- | ----- | ------- | ----------- |
+| width | String, Number | false | false | `100%` | Set calendar width |
+| height | String, Number | false | false | `100%` | Set calendar height |
+
+
+### Dropdown
+
+#### Props
+
+| Name | Type | Required | Watch | Default | Description |
+| ---- | ---- | -------- | ----- | ------- | ----------- |
+| index | Number | false | false | 0 | Sets the item to be activated |
+| width | Number | false | false | 100 | The width of the component |
+| height | Number | false | false | 100 | The height of the component |
+| left | Number | false | false | 0 | The left position value of the component |
+| top | Number | false | false | 0 | The top position value of the component |
+| size | String | false | false | `small` | The size styles of the component (**mini**, **small**, **large**) |
+| keydown | Boolean | false | false | false | Option to select items with up/down arrow keys |
+| items | String | false | true | `undefined` | Item list of drop-down menu |
+| active | Boolean | false | true | false | Options showing a drop-down menu |
+| anchor | Boolean | false | false | false | Set options to display anchor style |
+
+#### Events
+
+| Name | Arguments | Description |
+| ---- | --------- | ----------- |
+| change | item, event | Events that occur when you select a item |
+
+
+### Modal
+
+#### Props
+
+| Name | Type | Required | Watch | Default | Description |
+| ---- | ---- | -------- | ----- | ------- | ----------- |
+| root | String | false | true | `null` | Selector for the modal background element |
+| target | String | false | true | `null` | Selector of targeted element |
+| active | Boolean | false | true | false | Options showing a modal |
+| color | String | false | false | `black` | Background color of modal |
+| opacity | Number | false | false | 0.4 | Background opacity of modal |
+| zIndex | Number | false | false | 0 | Z-index value of modal |
+| autoHide | Boolean | false | false | false | Option to automatically hide modal on background clicking |
+
+
+### Notification
+
+#### Props
+
+| Name | Type | Required | Watch | Default | Description |
+| ---- | ---- | -------- | ----- | ------- | ----------- |
+| root | String | false | true | `null` | Selector for the modal background element |
+| position | String | false | false | `bottom` | Option to set where the drop-down menu is shown (**top**, **bottom**) |
+| items | Array | false | true | `undefined` | Item list of drop-down menu |
+| template | String | false | false | `<td><!= date !></td>` | A template for markup that prints out the date |
+| icon | String | false | false | `` | When you want to use the icon, you can set the name of the icon provided by [JUI](http://uiplay.jui.io/?p=icons) (However, you do not need to use the prefix 'icon-') |
+| delay | Number | false | false | 3000 | After the notification is shown, delay time |
+| showDuration | Number | false | false | 500 | Duration of effect in which notifications are shown |
+| hideDuration | Number | false | false | 500 | Duration of effect in which notifications are hidden |
+| padding | Number | false | false | 12 | Padding between notification and notification |
+| distance | Number | false | false | 5 | Distance between notification and notification |
+
+
+#### Events
+
+| Name | Arguments | Description |
+| ---- | --------- | ----------- |
+| change | item, event | Events that occur when you select a item |
+| show | index | Events that occur when an notification is shown |
+| hide | index | Events that occur when an notification is hidden |
+
+
+### Switch
+
+#### Props
+
+| Name | Type | Required | Watch | Default | Description |
+| ---- | ---- | -------- | ----- | ------- | ----------- |
+| inside | Boolean | false | false | true | Sets the inside style option for the switch |
+| size | String | false | false | `small` | The size styles of the component (**mini**, **small**, **large**) |
+| checked | Boolean | false | false | false | Sets the check state of the switch |
+
+
+#### Events
+
+| Name | Arguments | Description |
+| ---- | --------- | ----------- |
+| change | checked, event | Events that occur when you change a switch |
+
+
+### Tab
+
+#### Props
+
+| Name | Type | Required | Watch | Default | Description |
+| ---- | ---- | -------- | ----- | ------- | ----------- |
+| type | String | false | false | `tab` | Set tab style type (**tab**, **pill**) |
+| position | String | false | false | `top` | Sets the position of the tab (**top**, **bottom**) |
+| items | Array | false | true | `undefined` | Item list of tab |
+| index | Number | false | true | 0 | Sets the item to be activated |
+| disable | Array | false | true | `null` | Sets the index of the tab to be disabled |
+
+
+#### Events
+
+| Name | Arguments | Description |
+| ---- | --------- | ----------- |
+| change | checked, event | Events that occur when you change a activated tab |
+
+
+### Tree
+
+#### Props
+
+| Name | Type | Required | Watch | Default | Description |
+| ---- | ---- | -------- | ----- | ------- | ----------- |
+| type | String | false | false | `line` | Set tree style type (**line**, **line-file**, **arrow**, **arow-file**) |
+| rootName | String | false | false | `null` | Sets the name of the root node |
+| rootHide | Boolean | false | false | false | Option to hide root node by default |
+| rootFold | Boolean | false | false | false | Option to hide fold node by default |
+| template | String | false | false | `<li><div><i></i> <!= text !></div><ul></ul></li>` | A template for markup that prints out the node |
+| items | Array | false | true | `undefined` | Node list of tree |
+| item | Object | false | true | `null` | Sets the node to be activated |
+
+#### Events
+
+| Name | Arguments | Description |
+| ---- | --------- | ----------- |
+| change | item, event | Events that occur when you select a node |
+| open | item, event | Events that occur when the child nodes of the selected node are opened |
+| fold | item, event | Events that occur when the child nodes of the selected node are folded |
