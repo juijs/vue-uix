@@ -1,6 +1,6 @@
-<template src="./html/combo.html"></template>
+<template src="./html/combobox.html"></template>
 
-<script src="./js/combo.js"></script>
+<script src="./js/combobox.js"></script>
 
 <style scoped lang="less">
     @import "~juijs-ui/src/styles/base/mixins.less";
@@ -12,5 +12,5 @@
     @import "~juijs-ui/src/styles/button.theme.less";
     @import "~juijs-ui/src/styles/combo.less";
     @import "~juijs-ui/src/styles/combo.theme.less";
-    @import "~juijs-ui/src/styles/theme/classic.less";
+    @import "~juijs-ui/src/styles/theme/dark.less";
 </style>

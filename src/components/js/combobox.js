@@ -5,7 +5,7 @@ import ComboComp from 'juijs-ui/src/components/combo'
 JUI.use(ComboComp);
 
 export default {
-    name: 'uix-combo',
+    name: 'uix-combobox',
     mixins: [ methods ],
     props: {
         index: {
