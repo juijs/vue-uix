@@ -116,7 +116,7 @@ Vue.component(UixCombo.name, UixCombo);
 | Name | Type | Required | Watch | Default | Description |
 | ---- | ---- | -------- | ----- | ------- | ----------- |
 | type | String | false | false | `radio` | It is a button selection option. Radio is single and Check is multi-selectable. (**check**) |
-| index | Number | false | true | 0 | Sets the initially selected item index |
+| index | Number | false | true | 0 | Sets the button to be activated |
 | value | String, Array | false | true | `` | Selected value. Radio is string type, Check is array type |
 | size | String | false | false | `small` | The size styles of the component (**mini**, **large**) |
 | items | Array | true | true | `undefined` | Button list |
@@ -125,4 +125,19 @@ Vue.component(UixCombo.name, UixCombo);
 
 | Name | Arguments | Description |
 | ---- | --------- | ----------- |
-| change | text, event | Events that occur when you click a button |
+| change | item, event | Events that occur when you click a button |
+
+
+### Colorpicker
+
+#### Props
+
+| Name | Type | Required | Watch | Default | Description |
+| ---- | ---- | -------- | ----- | ------- | ----------- |
+| color | String, Object | true | false | `#FFF` | Default color code, which can be set to a hex string or an RGB object |
+
+#### Events
+
+| Name | Arguments | Description |
+| ---- | --------- | ----------- |
+| change | hex, rgb | Events that occur when you select a color |
