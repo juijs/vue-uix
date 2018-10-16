@@ -222,3 +222,18 @@ Vue.component(UixCombo.name, UixCombo);
 | Name | Arguments | Description |
 | ---- | --------- | ----------- |
 | change | item, event | Events that occur when you select a item |
+
+
+### Modal
+
+#### Props
+
+| Name | Type | Required | Watch | Default | Description |
+| ---- | ---- | -------- | ----- | ------- | ----------- |
+| root | String | false | true | `null` | Selector for the modal background element |
+| target | String | false | true | `null` | Selector of targeted element |
+| active | Boolean | false | true | false | Options showing a modal |
+| color | String | false | false | `black` | Background color of modal |
+| opacity | Number | false | false | 0.4 | Background opacity of modal |
+| zIndex | Number | false | false | 0 | Z-index value of modal |
+| autoHide | Boolean | false | false | false | Option to automatically hide modal on background clicking |
