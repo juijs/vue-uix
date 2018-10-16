@@ -19,7 +19,6 @@ If you are using an existing JUI style, Just download `dist/vue-uix.base.js` and
 ```html
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.js"></script>
-<script src="https://cdn.rawgit.com/juijs/vue-graph/2216ae2f/dist/vue-graph.js"></script>
 <script src="dist/vue-uix.base.js"></script>
 <link rel="stylesheet" href="jui-ui.classic.css" />
 <!--<link rel="stylesheet" href="jui-ui.dark.css" />-->
@@ -31,7 +30,6 @@ Download the `dist/vue-uix.classic.js` and `dist/vue-uix.css` and include it in 
 ```html
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.js"></script>
-<script src="https://cdn.rawgit.com/juijs/vue-graph/2216ae2f/dist/vue-graph.js"></script>
 <script src="dist/vue-uix.classic.js"></script>
 <!--<script src="dist/vue-uix.dark.js"></script>-->
 <link rel="stylesheet" href="dist/vue-uix.css" />
@@ -67,3 +65,24 @@ import UixCombo from 'vue-uix/src/components/combo.classic'
 
 Vue.component(UixCombo.name, UixCombo);
 ```
+
+## API
+
+### Accordion
+
+#### Props
+
+| Name | Type | Required | Watch | Default | Description |
+| ---- | ---- | -------- | ----- | ------- | ----------- |
+| type | String | false | false | `` | Additional styles of accordion (**simple**) |
+| items | Array | true | false | `undefined` | A list of accordion headers |
+| index | Number | false | false | `null` | Sets the accordion header to be activated |
+| autoFold | Boolean | false | false | false | Hide the content area when you click on the active accordion header again |
+| width | Number, String | false | true | `100%` | The width of the accordion component |
+
+#### Events
+
+| Name | Arguments | Description |
+| ---- | --------- | ----------- |
+| open | index | Events that occur when an accordion content is opened |
+| fold | index | Events that occur when an accordion content is closed |
