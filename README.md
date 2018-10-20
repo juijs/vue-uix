@@ -207,7 +207,7 @@ Vue.component(UixComboBox.name, UixComboBox);
 | next | event | Events that occur when you change to the next month |
 
 
-### [Calendar (extends Date Picker)](https://codepen.io/seogi1004/pen/xyzOoL)
+### [Calendar](https://codepen.io/seogi1004/pen/xyzOoL) (extends Date Picker)
 
 #### Props
 
