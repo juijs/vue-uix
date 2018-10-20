@@ -12,19 +12,11 @@ Vue.use(VueUix, { theme: "classic" });
 window.vm = new Vue({
     el: "#app",
     data: {
-        items: [
-            "Group Item #1",
-            "Group Item #2",
-            "Group Item #3"
-        ],
-        index: 0
+        color: '#000'
     },
     methods: {
-        onOpenEvent: function(index, e) {
-            this.index = index;
-        },
-        onFoldEvent: function(index, e) {
-            this.index = null;
+        onChangeEvent: function(hex, rgb) {
+            this.color = hex;
         }
     }
 });

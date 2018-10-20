@@ -34,6 +34,6 @@ export default {
         });
 
         // 내부 마크업에 스타일 스코프 설정하기
-        this.replaceScopedHash("input.div");
+        this.replaceScopedHash("input,div");
     }
 }
