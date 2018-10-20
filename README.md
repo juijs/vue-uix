@@ -61,10 +61,10 @@ Vue.component(UixComboBox.name, UixComboBox);
 
 ```js
 import Vue from 'vue'
-import UixCombo from 'vue-uix/src/components/combo.classic'
-// import UixCombo from 'vue-uix/src/components/combo.dark'
+import UixComboBox from 'vue-uix/src/components/combobox.classic'
+// import UixComboBox from 'vue-uix/src/components/combobox.dark'
 
-Vue.component(UixCombo.name, UixCombo);
+Vue.component(UixComboBox.name, UixComboBox);
 ```
 
 
