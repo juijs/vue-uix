@@ -82,6 +82,7 @@ Vue.component(UixComboBox.name, UixComboBox);
 - [Notification](https://codepen.io/seogi1004/pen/MPXjmp)
 - [Switch](https://codepen.io/seogi1004/pen/aRKmWq)
 - [Tab](https://codepen.io/seogi1004/pen/oayzWP)
+- [Tree](https://codepen.io/seogi1004/pen/OBEROJ)
 
 
 ## API
@@ -320,7 +321,7 @@ Vue.component(UixComboBox.name, UixComboBox);
 | change | checked, event | Events that occur when you change a activated tab |
 
 
-### Tree
+### [Tree](https://codepen.io/seogi1004/pen/OBEROJ)
 
 #### Props
 
