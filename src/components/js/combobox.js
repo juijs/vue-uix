@@ -67,31 +67,31 @@ export default {
         items: function(newVal, oldVal) {
             if(newVal.length == 0) return;
 
-            this.uix.reload();
+            this.ui.reload();
             this.$el.children[0].innerHTML = newVal[0].text;
         },
         index: function(newVal, oldVal) {
             if(newVal > -1 && newVal < this.items.length) {
-                this.uix.setIndex(newVal);
+                this.ui.setIndex(newVal);
             }
         },
         value: function(newVal, oldVal) {
             if(this.containValue(newVal)) {
-                this.uix.setValue(newVal);
+                this.ui.setValue(newVal);
             }
         },
         active: function(newVal, oldVal) {
             if(newVal) {
-                this.uix.open();
+                this.ui.open();
             } else {
-                this.uix.fold();
+                this.ui.fold();
             }
         }
     },
     mounted: function() {
         const self = this;
 
-        this.uix = JUI.create("ui.combo", this.$el, {
+        this.ui = JUI.create("ui.combo", this.$el, {
             index: this.index,
             value: this.value,
             width: this.width,
@@ -108,6 +108,6 @@ export default {
             }
         });
 
-        if(this.active) this.uix.open();
+        if(this.active) this.ui.open();
     }
 }

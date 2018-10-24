@@ -65,20 +65,20 @@ export default {
         items: function(newVal, oldVal) {
             if(newVal.length == 0) return;
 
-            this.uix.reload();
+            this.ui.reload();
         },
         active: function(newVal, oldVal) {
             if(newVal) {
-                this.uix.show();
+                this.ui.show();
             } else {
-                this.uix.hide();
+                this.ui.hide();
             }
         }
     },
     mounted: function() {
         const self = this;
 
-        this.uix = JUI.create("ui.dropdown", this.$el, {
+        this.ui = JUI.create("ui.dropdown", this.$el, {
             keydown: this.keydown,
             width: this.width,
             height: this.height,
@@ -94,6 +94,6 @@ export default {
             }
         });
 
-        if(this.active) this.uix.show();
+        if(this.active) this.ui.show();
     }
 }

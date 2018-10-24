@@ -42,23 +42,23 @@ export default {
         items: function(newVal, oldVal) {
             if(newVal.length == 0) return;
 
-            this.uix.reload();
+            this.ui.reload();
         },
         index: function(newVal, oldVal) {
             if(newVal > -1 && newVal < this.items.length) {
-                this.uix.setIndex(newVal);
+                this.ui.setIndex(newVal);
             }
         },
         value: function(newVal, oldVal) {
             if(this.containValue(newVal)) {
-                this.uix.setValue(newVal);
+                this.ui.setValue(newVal);
             }
         }
     },
     mounted: function() {
         const self = this;
 
-        this.uix = JUI.create("ui.button", this.$el, {
+        this.ui = JUI.create("ui.button", this.$el, {
             type: this.type,
             index: this.index,
             value: this.value,

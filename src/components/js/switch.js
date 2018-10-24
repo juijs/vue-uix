@@ -24,13 +24,13 @@ export default {
     },
     watch: {
         checked: function(newVal, oldVal) {
-            this.uix.setValue(newVal);
+            this.ui.setValue(newVal);
         }
     },
     mounted: function() {
         const self = this;
 
-        this.uix = JUI.create("ui.switch", this.$el, {
+        this.ui = JUI.create("ui.switch", this.$el, {
             checked: this.checked,
             event: {
                 change: function(value) {

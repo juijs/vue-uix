@@ -18,13 +18,13 @@ export default {
         color: function(newVal, oldVal) {
             if(newVal === oldVal) return;
 
-            this.uix.setColor(newVal);
+            this.ui.setColor(newVal);
         }
     },
     mounted: function() {
         const self = this;
 
-        this.uix = JUI.create("ui.colorpicker", this.$el, {
+        this.ui = JUI.create("ui.colorpicker", this.$el, {
             color: this.color,
             event: {
                 change: function(hex, rgb) {

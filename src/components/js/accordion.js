@@ -42,7 +42,7 @@ export default {
     mounted: function() {
         const self = this;
 
-        this.uix = JUI.create("ui.accordion", this.$el, {
+        this.ui = JUI.create("ui.accordion", this.$el, {
             index: this.index,
             autoFold: this.autoFold,
             event: {

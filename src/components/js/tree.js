@@ -54,7 +54,7 @@ export default {
         items: function(newVal, oldVal) {
             if(newVal.length == 0) return;
 
-            this.uix.update(this.createTreeData(newVal));
+            this.ui.update(this.createTreeData(newVal));
             this.replaceScopedHash("i");
         },
         item: function(newVal, oldVal) {
@@ -75,14 +75,14 @@ export default {
             return treeData;
         },
         selectTreeNode: function(item) {
-            if(item != null) this.uix.select(item.index);
-            else this.uix.unselect();
+            if(item != null) this.ui.select(item.index);
+            else this.ui.unselect();
         }
     },
     mounted: function() {
         const self = this;
 
-        this.uix = JUI.create("ui.tree", this.$el, {
+        this.ui = JUI.create("ui.tree", this.$el, {
             root: {
                 text: this.rootName
             },
@@ -113,7 +113,7 @@ export default {
             }
         });
 
-        this.uix.update(this.createTreeData(this.items));
+        this.ui.update(this.createTreeData(this.items));
         this.replaceScopedHash("i");
         this.selectTreeNode(this.item);
     }

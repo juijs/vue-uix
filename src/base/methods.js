@@ -14,7 +14,7 @@ export default {
         replaceScopedHash: function(selector) {
             const self = this;
 
-            $(this.uix.root).find(selector).each(function() {
+            $(this.ui.root).find(selector).each(function() {
                 $(this).attr(self.$options._scopeId, true)
             });
         }

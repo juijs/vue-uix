@@ -44,15 +44,15 @@ export default {
     watch: {
         active: function(newVal, oldVal) {
             if(newVal) {
-                this.uix.show();
-                this.uix.resize();
+                this.ui.show();
+                this.ui.resize();
             } else {
-                this.uix.hide();
+                this.ui.hide();
             }
         }
     },
     mounted: function() {
-        this.uix = JUI.create("ui.modal", this.target, {
+        this.ui = JUI.create("ui.modal", this.target, {
             target: this.root,
             color: this.color,
             opacity: this.opacity,
@@ -62,8 +62,8 @@ export default {
         });
 
         if(this.active) {
-            this.uix.show();
-            this.uix.resize();
+            this.ui.show();
+            this.ui.resize();
         }
     }
 }

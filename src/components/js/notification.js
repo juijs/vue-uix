@@ -82,7 +82,7 @@ export default {
         callNotifications: function(items) {
             while(items.length > 0) {
                 const item = items.shift();
-                this.uix.add(item);
+                this.ui.add(item);
             }
 
             this.replaceScopedHash();
@@ -94,7 +94,7 @@ export default {
         // TODO: 알림이 발생한 엘리먼트의 position 스타일 값을 변경한다.
         $(this.root).css("position", "relative");
 
-        this.uix = JUI.create("ui.notify", this.root, {
+        this.ui = JUI.create("ui.notify", this.root, {
             position: this.position,
             timeout: this.delay,
             padding: this.padding,

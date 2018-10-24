@@ -1,7 +1,8 @@
 import JUI from 'juijs-ui'
+import DropdownComp from 'juijs-ui/src/components/dropdown'
 import TabComp from 'juijs-ui/src/components/tab'
 
-JUI.use(TabComp);
+JUI.use(DropdownComp, TabComp);
 
 export default {
     name: 'uix-tab',
@@ -35,17 +36,17 @@ export default {
         items: function(newVal, oldVal) {
             if(newVal.length == 0) return;
 
-            this.uix.update(newVal);
+            this.ui.update(newVal);
         },
         index: function(newVal, oldVal) {
-            this.uix.show(newVal);
+            this.ui.show(newVal);
         },
         disable: function(newVal, oldVal) {
             for(let i = 0; i < this.items.length; i++) {
                 if(newVal.includes(i)) {
-                    this.uix.disable(i);
+                    this.ui.disable(i);
                 } else {
-                    this.uix.enable(i);
+                    this.ui.enable(i);
                 }
             }
         }
@@ -53,7 +54,7 @@ export default {
     mounted: function() {
         const self = this;
 
-        this.uix = JUI.create("ui.tab", this.$el, {
+        this.ui = JUI.create("ui.tab", this.$el, {
             index: this.index,
             event: {
                 'change': function(data, e) {

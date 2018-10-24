@@ -54,14 +54,14 @@ export default {
         items: function(newVal, oldVal) {
             if(newVal.length == 0) return;
 
-            this.uix.reload();
+            this.ui.reload();
             this.$el.children[0].innerHTML = newVal[0].text;
         }
     },
     mounted: function() {
         const self = this;
 
-        this.uix = JUI.create("ui.autocomplete", this.$el, {
+        this.ui = JUI.create("ui.autocomplete", this.$el, {
             target: this.icon === '' ? null : "input[type=text]",
             words: this.items,
             event: {

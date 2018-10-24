@@ -37,13 +37,13 @@ export default {
     },
     watch: {
         date: function(newVal, oldVal) {
-            this.uix.select(newVal);
+            this.ui.select(newVal);
         }
     },
     mounted: function() {
         const self = this;
 
-        this.uix = JUI.create("ui.datepicker", this.$el, {
+        this.ui = JUI.create("ui.datepicker", this.$el, {
             titleFormat: this.titleFormat,
             format: this.dateFormat,
             date: this.dateObj,
