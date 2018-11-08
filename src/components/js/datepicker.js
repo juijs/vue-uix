@@ -29,7 +29,10 @@ export default {
     },
     computed: {
         parsingTpl: function () {
-            return this.template.split("<td>").join("<td " + this.$options._scopeId + ">");
+            const _scopeId = this.$options._scopeId;
+            if(_scopeId == undefined) return this.template;
+
+            return this.template.split("<td>").join("<td " + _scopeId + ">");
         },
         dateObj: function() {
             return (this.date == null) ? new Date() : new Date(this.date);

@@ -12,11 +12,13 @@ export default {
             return false;
         },
         replaceScopedHash: function(selector) {
-            const self = this;
+            const _scopeId = this.$options._scopeId;
 
-            $(this.ui.root).find(selector).each(function() {
-                $(this).attr(self.$options._scopeId, true)
-            });
+            if(_scopeId != undefined) {
+                $(this.ui.root).find(selector).each(function () {
+                    $(this).attr(_scopeId, true)
+                });
+            }
         }
     }
 }

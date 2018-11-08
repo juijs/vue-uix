@@ -21,7 +21,7 @@ export default {
         width: {
             type: Number,
             required: false,
-            default: 100
+            default: 0
         },
         height: {
             type: Number,
@@ -63,6 +63,11 @@ export default {
             default: false
         }
     },
+    computed: {
+        realWidth: function() {
+            return this.width == 0 ? "auto" : this.width;
+        }
+    },
     watch: {
         items: function(newVal, oldVal) {
             if(newVal.length == 0) return;
@@ -94,7 +99,7 @@ export default {
         this.ui = JUI.create("ui.combo", this.$el, {
             index: this.index,
             value: this.value,
-            width: this.width,
+            width: this.realWidth,
             height: this.height,
             keydown: this.keydown,
             flex: this.flex,

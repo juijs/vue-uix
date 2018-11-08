@@ -9,7 +9,8 @@
 <!--<body class="jui">-->
 <body>
 <div id="app">
-    <uix-colorpicker :color="color" @change="onChangeEvent"></uix-colorpicker>
+    <uix-calendar :width="width" :height="height" :date="now" :date-format="'yyyy/MM/dd'"
+                  @change="onChangeEvent" @prev="onPrevEvent" @next="onNextEvent"></uix-calendar>
 </div>
 </body>
 </html>

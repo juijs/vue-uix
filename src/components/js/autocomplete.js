@@ -39,9 +39,12 @@ export default {
     },
     computed: {
         parsingTpl: function () {
-            let tpl = this.template.split("<div>").join("<div " + this.$options._scopeId + ">");
-            tpl = tpl.split("<ul>").join("<ul " + this.$options._scopeId + ">");
-            tpl = tpl.split("<li>").join("<li " + this.$options._scopeId + ">");
+            const _scopeId = this.$options._scopeId;
+            if(_scopeId == undefined) return this.template;
+
+            let tpl = this.template.split("<div>").join("<div " + _scopeId + ">");
+            tpl = tpl.split("<ul>").join("<ul " + _scopeId + ">");
+            tpl = tpl.split("<li>").join("<li " + _scopeId + ">");
             return tpl;
         },
         style: function() {
