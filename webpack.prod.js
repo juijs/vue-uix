@@ -62,6 +62,9 @@ module.exports = (theme) => {
             // , new BundleAnalyzerPlugin()
         ],
         resolve: {
+            alias: {
+                '@': path.resolve(__dirname, 'src')
+            },
             extensions: ['*', '.js', '.vue', '.json', '.less']
         }
     }

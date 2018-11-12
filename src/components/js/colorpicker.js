@@ -1,4 +1,4 @@
-import methods from '../../base/methods'
+import methods from '@/base/methods'
 import JUI from 'juijs-ui'
 import ColorPickerComp from 'juijs-ui/src/components/colorpicker'
 
