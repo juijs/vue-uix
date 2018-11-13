@@ -63,7 +63,7 @@ module.exports = (theme) => {
         ],
         resolve: {
             alias: {
-                '@': path.resolve(__dirname, 'src')
+                '@uix': path.resolve(__dirname, 'src')
             },
             extensions: ['*', '.js', '.vue', '.json', '.less']
         }

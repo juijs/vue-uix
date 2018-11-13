@@ -13,7 +13,7 @@ module.exports = {
     },
     // support the same @ -> src alias mapping in source code
     "moduleNameMapper": {
-        "^@/(.*)$": "<rootDir>/src/$1"
+        "^@uix/(.*)$": "<rootDir>/src/$1"
     },
     // serializer for snapshots
     "snapshotSerializers": [

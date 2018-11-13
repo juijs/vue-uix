@@ -1,4 +1,4 @@
-import methods from '@/base/methods'
+import methods from '@uix/base/methods'
 import JUI from 'juijs-ui'
 import ButtonComp from 'juijs-ui/src/components/button'
 

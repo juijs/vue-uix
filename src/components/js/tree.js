@@ -1,4 +1,4 @@
-import methods from '@/base/methods'
+import methods from '@uix/base/methods'
 import JUI from 'juijs-ui'
 import TreeComp from 'juijs-ui/src/components/tree'
 
