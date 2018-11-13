@@ -1,4 +1,3 @@
-import methods from '@uix/base/methods'
 import JUI from 'juijs-ui'
 import ComboComp from 'juijs-ui/src/components/combo'
 
@@ -6,7 +5,6 @@ JUI.use(ComboComp);
 
 export default {
     name: 'uix-combobox',
-    mixins: [ methods ],
     props: {
         index: {
             type: Number,

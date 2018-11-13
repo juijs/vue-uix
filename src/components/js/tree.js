@@ -1,4 +1,3 @@
-import methods from '@uix/base/methods'
 import JUI from 'juijs-ui'
 import TreeComp from 'juijs-ui/src/components/tree'
 
@@ -6,7 +5,6 @@ JUI.use(TreeComp);
 
 export default {
     name: 'uix-tree',
-    mixins: [ methods ],
     props: {
         type: {
             type: String,

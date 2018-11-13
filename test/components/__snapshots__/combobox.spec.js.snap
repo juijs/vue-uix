@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`combo.js server render 1`] = `
+exports[`combobox.js server render 1`] = `
 <div class="combo"><a class="btn small">Selected...</a> <a class="btn toggle small"><i class="icon-arrow2"></i></a>
   <ul>
     <li><a href="#" value="1">a</a></li>

@@ -9,8 +9,7 @@
 <!--<body class="jui">-->
 <body>
 <div id="app">
-    <uix-calendar :width="width" :height="height" :date="now" :date-format="'yyyy/MM/dd'"
-                  @change="onChangeEvent" @prev="onPrevEvent" @next="onNextEvent"></uix-calendar>
+    <uix-button :items="buttons" :value="value" :type="'radio'" @change="onChangeEvent"></uix-button>
 </div>
 </body>
 </html>

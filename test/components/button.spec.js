@@ -1,6 +1,6 @@
 import { mount } from 'vue-test-utils'
 import { createRenderer } from 'vue-server-renderer'
-import UixButton from '../../src/components/button'
+import UixButton from '@/components/button'
 
 describe('button.js', () => {
     const wrapper = mount(UixButton, {

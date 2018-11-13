@@ -1,8 +1,8 @@
 import { mount } from 'vue-test-utils'
 import { createRenderer } from 'vue-server-renderer'
-import UixComboBox from '../../src/components/combobox'
+import UixComboBox from '@/components/combobox'
 
-describe('combo.js', () => {
+describe('combobox.js', () => {
     const wrapper = mount(UixComboBox, {
         propsData: {
             items: [

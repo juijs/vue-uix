@@ -1,4 +1,3 @@
-import methods from '@uix/base/methods'
 import JUI from 'juijs-ui'
 import ColorPickerComp from 'juijs-ui/src/components/colorpicker'
 
@@ -6,7 +5,6 @@ JUI.use(ColorPickerComp);
 
 export default {
     name: 'uix-colorpicker',
-    mixins: [ methods ],
     props: {
         color: {
             type: [ String, Object ],

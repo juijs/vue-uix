@@ -1,4 +1,3 @@
-import methods from '@uix/base/methods'
 import JUI from 'juijs-ui'
 import ButtonComp from 'juijs-ui/src/components/button'
 
@@ -6,7 +5,6 @@ JUI.use(ButtonComp);
 
 export default {
     name: 'uix-button',
-    mixins: [ methods ],
     props: {
         type: {
             type: String,

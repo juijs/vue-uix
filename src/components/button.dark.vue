@@ -1,6 +1,13 @@
 <template src="./html/button.html"></template>
 
-<script src="./js/button.js"></script>
+<script>
+    import Vue from 'vue'
+    import UixButton from './js/button'
+    import methods from '../base/methods'
+
+    Vue.mixin({ mixins: [ methods ]});
+    export default UixButton;
+</script>
 
 <style scoped lang="less">
     @import "~juijs-ui/src/styles/base/mixins.less";
