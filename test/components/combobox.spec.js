@@ -1,5 +1,4 @@
 import { mount } from 'vue-test-utils'
-import { createRenderer } from 'vue-server-renderer'
 import UixComboBox from '@/components/combobox'
 
 describe('combobox.js', () => {
@@ -16,11 +15,10 @@ describe('combobox.js', () => {
     })
 
     it('server render', () => {
-        const renderer = createRenderer();
+        wrapper.vm.$mount();
 
-        renderer.renderToString(wrapper.vm, (err, str) => {
-            if (err) throw new Error(err);
-            expect(str).toMatchSnapshot();
-        })
+        wrapper.vm.$nextTick(() => {
+            expect(wrapper.vm.$el).toMatchSnapshot();
+        });
     });
 })

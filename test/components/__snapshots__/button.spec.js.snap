@@ -1,20 +1,71 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`button.js server render 1`] = `
-<div class="group"><a value="1" class="btn small" style="width:70px;">
+<div
+  class="group"
+>
+  <a
+    class="btn small active"
+    style="width: 70px;"
+    value="1"
+  >
     <!---->
-    A
-  </a><a value="2" class="btn small" style="width:70px;">
+    
+        A
+    
+  </a>
+  <a
+    class="btn small"
+    style="width: 70px;"
+    value="2"
+  >
     <!---->
-    B
-  </a><a value="3" class="btn small" style="width:70px;">
+    
+        B
+    
+  </a>
+  <a
+    class="btn small"
+    style="width: 70px;"
+    value="3"
+  >
     <!---->
-    C
-  </a><a value="home" class="btn small focus"><i class="icon-home"></i>
-    Home
-  </a><a value="gear" class="btn small"><i class="icon-gear"></i>
-    Gear
-  </a><a value="help" class="btn small"><i class="icon-help"></i>
-
-  </a></div>
+    
+        C
+    
+  </a>
+  <a
+    class="btn small focus"
+    value="home"
+  >
+    <i
+      class="icon-home"
+    />
+    
+        Home
+    
+  </a>
+  <a
+    class="btn small"
+    value="gear"
+  >
+    <i
+      class="icon-gear"
+    />
+    
+        Gear
+    
+  </a>
+  <a
+    class="btn small"
+    value="help"
+  >
+    <i
+      class="icon-help"
+    />
+    
+        
+    
+  </a>
+</div>
 `;
