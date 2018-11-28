@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`combobox.js server render 1`] = `
+exports[`combobox.js snapshot!! 1`] = `
 <div
   class="combo"
   value="1"

@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tree.js snapshot!! 1`] = `
+<ul
+  class="tree line"
+>
+  <li
+    class="open root"
+  >
+    <i />
+    <div>
+      <i />
+       C:\\
+    </div>
+    <ul>
+      <li
+        class="open"
+      >
+        <i />
+        <div>
+          <i />
+           Windows
+        </div>
+        <ul>
+          <li
+            class="leaf"
+          >
+            <i />
+            <div>
+              <i />
+               dll
+            </div>
+            <ul />
+          </li>
+          <li
+            class="leaf last active"
+          >
+            <i />
+            <div>
+              <i />
+               zip
+            </div>
+            <ul />
+          </li>
+        </ul>
+      </li>
+      <li
+        class="leaf last"
+      >
+        <i />
+        <div>
+          <i />
+           Download
+        </div>
+        <ul />
+      </li>
+    </ul>
+  </li>
+</ul>
+`;

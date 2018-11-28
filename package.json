@@ -1,6 +1,6 @@
 {
   "name": "vue-uix",
-  "version": "0.5.5",
+  "version": "0.6.0",
   "description": "Vue components based on the JUI components available in Vue.js",
   "main": "src/main.js",
   "files": [
@@ -17,7 +17,7 @@
   "scripts": {
     "start": "npm run dev",
     "dev": "webpack-dev-server --env dev",
-    "dist": "webpack --env=prod",
+    "dist": "npm run test && webpack --env=prod",
     "dist:classic": "webpack --env=prod",
     "dist:dark": "webpack --env=prod",
     "test": "jest --config ./jest.config.js"
@@ -72,7 +72,7 @@
   },
   "dependencies": {
     "jquery": "^3.3.1",
-    "juijs-ui": "^2.2.7-es6",
+    "juijs-ui": "^2.3.0-es6",
     "vue": "^2.5.17"
   }
 }

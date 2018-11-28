@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`button.js server render 1`] = `
+exports[`button.js snapshot!! 1`] = `
 <div
   class="group"
 >

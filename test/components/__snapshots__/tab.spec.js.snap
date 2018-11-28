@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tab.js snapshot!! 1`] = `
+<ul
+  class="tab top"
+>
+  <li>
+    <a
+      href="#"
+    >
+      <!---->
+      
+            Java
+        
+    </a>
+  </li>
+  <li
+    class="active"
+  >
+    <a
+      href="#"
+    >
+      <!---->
+      
+            JavaScript
+        
+    </a>
+    <div
+      class="anchor"
+    />
+  </li>
+  <li>
+    <a
+      href="#"
+    >
+      <!---->
+      
+            CSS
+        
+    </a>
+  </li>
+  <li>
+    <a
+      href="#"
+    >
+      <!---->
+      
+            SCSS
+        
+    </a>
+  </li>
+</ul>
+`;

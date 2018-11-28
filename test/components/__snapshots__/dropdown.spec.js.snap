@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`dropdown.js snapshot!! 1`] = `
+<div
+  class="dropdown small"
+  style="width: 0px; position: absolute; margin-top: 10px;"
+>
+  <div
+    class="anchor"
+  />
+   
+  <ul
+    style="width: 200px; display: block;"
+  >
+    <li
+      class=""
+      value="0"
+    >
+      한국
+    </li>
+    <li
+      class=""
+      value="1"
+    >
+      미국
+    </li>
+    <li
+      class=""
+      value="2"
+    >
+      일본
+    </li>
+    <li
+      class=""
+      value="3"
+    >
+      중국
+    </li>
+    <li
+      class=""
+      value="4"
+    >
+      프랑스
+    </li>
+  </ul>
+</div>
+`;

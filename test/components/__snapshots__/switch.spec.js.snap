@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`switch.js snapshot!! 1`] = `
+<div
+  class="switch small inner"
+>
+  <div
+    class="area"
+  >
+    <div
+      class="bar"
+    >
+      <div
+        class="left"
+      />
+      <div
+        class="right"
+      />
+    </div>
+  </div>
+  <div
+    class="handle"
+  />
+</div>
+`;

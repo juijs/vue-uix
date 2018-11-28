@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`colorpicker.js snapshot!! 1`] = `
+<div
+  class="colorpicker"
+>
+  <div
+    class="color"
+    style="background-color: rgb(0, 0, 0);"
+  >
+    <div
+      class="saturation"
+    >
+      <div
+        class="value"
+      >
+        <div
+          class="drag-pointer"
+          style="left: -5px; top: 140px;"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    class="control"
+  >
+    <div
+      class="hue"
+    >
+      <div
+        class="container"
+      >
+        <div
+          class="drag-bar"
+          style="left: -7.5px;"
+        />
+      </div>
+    </div>
+    <div
+      class="opacity"
+    >
+      <div
+        class="container"
+      >
+        <div
+          class="drag-bar2"
+          style="left: 111.5px;"
+        />
+      </div>
+    </div>
+    <input
+      class="input"
+      disabled="disabled"
+      type="text"
+    />
+    <div
+      class="empty"
+    />
+    <div
+      class="color"
+      style="background-color: rgb(0, 0, 0);"
+    />
+  </div>
+  <div
+    class="information"
+  >
+    <input
+      class="input"
+      maxlength="7"
+      type="text"
+    />
+    <input
+      class="input"
+      maxlength="3"
+      type="text"
+    />
+    <input
+      class="input"
+      maxlength="3"
+      type="text"
+    />
+    <input
+      class="input"
+      maxlength="3"
+      type="text"
+    />
+    <div
+      class="title"
+    >
+      HEX
+    </div>
+    <div
+      class="title"
+    >
+      R
+    </div>
+    <div
+      class="title"
+    >
+      G
+    </div>
+    <div
+      class="title"
+    >
+      B
+    </div>
+  </div>
+</div>
+`;

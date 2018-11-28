@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`accordion.js snapshot!! 1`] = `
+<div
+  class="accordion"
+  style="width: 100%;"
+>
+  <div
+    class="title"
+  >
+    
+        Group Item #1 
+    <i
+      class="icon-arrow1"
+    />
+  </div>
+  <div
+    class="title active"
+  >
+    
+        Group Item #2 
+    <i
+      class="icon-arrow1"
+    />
+  </div>
+  <div
+    class="content"
+  />
+  <div
+    class="title"
+  >
+    
+        Group Item #3 
+    <i
+      class="icon-arrow1"
+    />
+  </div>
+   
+</div>
+`;

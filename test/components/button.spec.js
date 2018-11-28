@@ -19,7 +19,7 @@ describe('button.js', () => {
         expect(wrapper.vm.items.length).toBe(6);
     })
 
-    it('server render', () => {
+    it('snapshot!!', () => {
         wrapper.vm.$nextTick(() => {
             expect(wrapper.vm.$el).toMatchSnapshot();
         });
