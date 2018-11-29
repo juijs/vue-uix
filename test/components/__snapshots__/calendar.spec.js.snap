@@ -19,7 +19,7 @@ exports[`calendar.js snapshot!! 1`] = `
     <div
       class="title"
     >
-      2018.11
+      2018.09
     </div>
      
     <div
@@ -64,6 +64,16 @@ exports[`calendar.js snapshot!! 1`] = `
         <td
           class="none"
         >
+          26
+        </td>
+        <td
+          class="none"
+        >
+          27
+        </td>
+        <td
+          class="none"
+        >
           28
         </td>
         <td
@@ -81,17 +91,19 @@ exports[`calendar.js snapshot!! 1`] = `
         >
           31
         </td>
-        <td>
+        <td
+          class="active"
+        >
           1
         </td>
+      </tr>
+      <tr>
         <td>
           2
         </td>
         <td>
           3
         </td>
-      </tr>
-      <tr>
         <td>
           4
         </td>
@@ -107,14 +119,14 @@ exports[`calendar.js snapshot!! 1`] = `
         <td>
           8
         </td>
+      </tr>
+      <tr>
         <td>
           9
         </td>
         <td>
           10
         </td>
-      </tr>
-      <tr>
         <td>
           11
         </td>
@@ -130,14 +142,14 @@ exports[`calendar.js snapshot!! 1`] = `
         <td>
           15
         </td>
+      </tr>
+      <tr>
         <td>
           16
         </td>
         <td>
           17
         </td>
-      </tr>
-      <tr>
         <td>
           18
         </td>
@@ -153,14 +165,14 @@ exports[`calendar.js snapshot!! 1`] = `
         <td>
           22
         </td>
+      </tr>
+      <tr>
         <td>
           23
         </td>
         <td>
           24
         </td>
-      </tr>
-      <tr>
         <td>
           25
         </td>
@@ -170,14 +182,14 @@ exports[`calendar.js snapshot!! 1`] = `
         <td>
           27
         </td>
-        <td
-          class="now active"
-        >
+        <td>
           28
         </td>
         <td>
           29
         </td>
+      </tr>
+      <tr>
         <td>
           30
         </td>
@@ -186,8 +198,6 @@ exports[`calendar.js snapshot!! 1`] = `
         >
           1
         </td>
-      </tr>
-      <tr>
         <td
           class="none"
         >
@@ -212,16 +222,6 @@ exports[`calendar.js snapshot!! 1`] = `
           class="none"
         >
           6
-        </td>
-        <td
-          class="none"
-        >
-          7
-        </td>
-        <td
-          class="none"
-        >
-          8
         </td>
       </tr>
     </tbody>

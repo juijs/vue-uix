@@ -4,8 +4,8 @@ import UixCalendar from '@/components/calendar'
 describe('calendar.js', () => {
     const wrapper = mount(UixCalendar, {
         propsData: {
-            dataFormat: 'yyyy/MM/dd',
-            now: "2018/09/01",
+            dateFormat: 'yyyy/MM/dd',
+            date: "2018/09/01",
             width: 500,
             height: 500
         }
