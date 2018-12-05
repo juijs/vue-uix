@@ -1,0 +1,27 @@
+.timepicker-group {
+  position: relative;
+  display: inline-block;
+
+  > .large {
+    line-height: 24px;
+    > input { margin-top: -3px; }
+  }
+  > .normal {
+    line-height: 20px;
+    > input { margin-top: -1px; }
+  }
+  > .small {
+    line-height: 16px;
+    > input { margin-top: -1px; }
+  }
+  > .mini {
+    line-height: 14px;
+    > input { margin-top: -1px; }
+  }
+
+  > .datepicker {
+    position: absolute;
+    z-index: 1;
+    display: none;
+  }
+}

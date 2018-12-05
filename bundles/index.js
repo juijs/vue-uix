@@ -11,24 +11,20 @@ Vue.use(VueUix, { theme: "classic" });
 
 window.vm = new Vue({
     el: "#app",
-    data: {
-        // button options
-        buttons: [
-            { icon: "", text: "A", value: "1", style: { width: "70px" } },
-            { icon: "", text: "B", value: "2", style: { width: "70px" } },
-            { icon: "", text: "C", value: "3", style: { width: "70px" } },
-            { icon: "home", text: "Home", value: "home", focus: true },
-            { icon: "gear", text: "Gear", value: "gear" },
-            { icon: "help", text: "", value: "help" }
-        ],
-        style: {
-            width: 200
-        },
-        value: [ "home", "help" ]
+    data: function() {
+        return {
+            topYear: 2015,
+            topMonth: 11,
+            topDate: 2,
+            bottomYear: 2020
+        }
     },
     methods: {
-        onChangeEvent: function(data, e) {
-            this.value = data.value;
+        onChangeValue: function(data) {
+            console.log(data);
+            this.topYear = data.year;
+            // this.topMonth = data.month;
+            // this.topDate = data.date;
         }
     }
 });

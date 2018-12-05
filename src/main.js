@@ -14,6 +14,7 @@ export default {
         const UixTree = require(`./components/tree${UixTheme}.vue`);
         const UixNotification = require(`./components/notification${UixTheme}.vue`);
         const UixAccordion = require(`./components/accordion${UixTheme}.vue`);
+        const UixTimePicker = require(`./components/timepicker${UixTheme}.vue`);
 
         Vue.component(UixModal.default.name, UixModal.default);
         Vue.component(UixComboBox.default.name, UixComboBox.default);
@@ -28,5 +29,6 @@ export default {
         Vue.component(UixTree.default.name, UixTree.default);
         Vue.component(UixNotification.default.name, UixNotification.default);
         Vue.component(UixAccordion.default.name, UixAccordion.default);
+        Vue.component(UixTimePicker.default.name, UixTimePicker.default);
     }
 }
