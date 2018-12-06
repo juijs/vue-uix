@@ -16,15 +16,16 @@ window.vm = new Vue({
             topYear: 2015,
             topMonth: 11,
             topDate: 2,
+            topHours: 6,
             bottomYear: 2020
         }
     },
     methods: {
         onChangeValue: function(data) {
-            console.log(data);
             this.topYear = data.year;
-            // this.topMonth = data.month;
-            // this.topDate = data.date;
+            this.topMonth = data.month;
+            this.topDate = data.date;
+            this.topHours = data.hours;
         }
     }
 });

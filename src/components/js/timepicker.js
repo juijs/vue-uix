@@ -138,12 +138,14 @@ export default {
         });
 
         if(this.useCalendar) {
+            const _scopeId = this.$options._scopeId || '';
+
             this.calendar = JUI.create('ui.datepicker', this.$el.getElementsByClassName('datepicker'), {
                 titleFormat: this.calendarTitleFormat,
                 format: this.calendarFormat,
                 date: this.dateForCalendar,
                 tpl: {
-                    date: `<td ${this.$options._scopeId}><!= date !></td>`
+                    date: `<td ${_scopeId}><!= date !></td>`
                 },
                 event: {
                     select: function(date, e) {
