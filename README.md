@@ -83,6 +83,7 @@ Vue.component(UixComboBox.name, UixComboBox);
 - [Switch](https://codepen.io/seogi1004/pen/aRKmWq)
 - [Tab](https://codepen.io/seogi1004/pen/oayzWP)
 - [Tree](https://codepen.io/seogi1004/pen/OBEROJ)
+- [Time Picker](https://codepen.io/seogi1004/pen/QJXBPE)
 
 
 ## API
@@ -342,3 +343,30 @@ Vue.component(UixComboBox.name, UixComboBox);
 | change | item, event | Events that occur when you select a node |
 | open | item, event | Events that occur when the child nodes of the selected node are opened |
 | fold | item, event | Events that occur when the child nodes of the selected node are folded |
+
+
+### [Time Picker](https://codepen.io/seogi1004/pen/QJXBPE)
+
+#### Props
+
+| Name | Type | Required | Watch | Default | Description |
+| ---- | ---- | -------- | ----- | ------- | ----------- |
+| size | String | false | false | `small` | The size styles of the component (**mini**, **small**, **large**) |
+| useDate | Boolean | false | false | false | Use the year/month/day button |
+| useTime | Boolean | false | false | false | Use the hours/minutes button |
+| minYear | Number | false | false | `auto` | Minimum year |
+| maxYear | Number | false | false | `auto` | Maximum year |
+| year | Number | false | false | `auto` | Current year |
+| month | Number | false | false | `auto` | Current month |
+| date | Number | false | false | `auto` | Current date |
+| hours | Number | false | false | `auto` | Current hours |
+| minutes | Number | false | false | `auto` | Current minutes |
+| useCalendar | Boolean | false | false | false | Use the calendar component |
+| calendarTitleFormat | String | false | false | `yyyy.MM` | Date format of calendar title |
+| calendarFormat | String | false | false | `yyyy-MM-dd` | Date format of calendar selected value |
+
+#### Events
+
+| Name | Arguments | Description |
+| ---- | --------- | ----------- |
+| change | data | Events that occur when you change a value |
