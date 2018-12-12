@@ -1,6 +1,6 @@
 {
   "name": "vue-uix",
-  "version": "0.6.2",
+  "version": "0.6.3",
   "description": "Vue components based on the JUI components available in Vue.js",
   "main": "src/main.js",
   "files": [
@@ -72,7 +72,7 @@
   },
   "dependencies": {
     "jquery": "^3.3.1",
-    "juijs-ui": "^2.3.2-es6",
+    "juijs-ui": "^2.3.3",
     "vue": "^2.5.17"
   }
 }
