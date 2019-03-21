@@ -21,11 +21,12 @@ window.vm = new Vue({
         }
     },
     methods: {
-        onChangeValue: function(data) {
+        onChangeValue: function(data, isCal) {
             this.topYear = data.year;
             this.topMonth = data.month;
             this.topDate = data.date;
             this.topHours = data.hours;
+            console.log(isCal);
         }
     }
 });

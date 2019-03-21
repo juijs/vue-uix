@@ -6,7 +6,7 @@
     </div>
     <div v-if="useTime" :class="[ 'timepicker', size ]">
         <input type="input" class="hours" maxlength="2" :data-value="hours" /> :
-        <input type="input" class="minutes" maxlength="2" :data-value="minutes" />
+        <input type="input" class="minutes" maxlength="2" :data-value="minutes" :disabled="!useMinutes" />
         <i class="icon-arrow7"></i>
     </div>
     <div v-if="useCalendar" class="datepicker">

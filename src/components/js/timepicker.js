@@ -25,6 +25,11 @@ export default {
             required: false,
             default: true
         },
+        useMinutes: {
+            type: Boolean,
+            required: false,
+            default: true
+        },
         minYear: {
             type: Number,
             required: false,
@@ -80,7 +85,6 @@ export default {
         year: function(newVal, oldVal) {
             if(newVal == this.ui.getYear()) return;
             this.ui.setYear(newVal);
-            console.log("change!!");
         },
         month: function(newVal, oldVal) {
             if(newVal == this.ui.getMonth()) return;
@@ -104,7 +108,7 @@ export default {
             const now = new Date();
             now.setFullYear(this.year, this.month - 1, this.date);
             now.setHours(this.hours);
-            now.setMinutes(this.minutes);
+            now.setMinutes(this.useMinutes ? this.minutes : 0);
             now.setSeconds(0);
             now.setMilliseconds(0);
             return now;
@@ -127,12 +131,13 @@ export default {
             month: this.month,
             date: this.date,
             hours: this.hours,
-            minutes: this.minutes,
+            minutes: this.useMinutes ? this.minutes : 0,
             minYear: this.minYear,
             maxYear: this.maxYear,
             event: {
                 change: function(data) {
-                    self.$emit('change', data);
+                    if(!self.useMinutes) data.minutes = 0;
+                    self.$emit('change', data, false);
                 }
             }
         });
@@ -156,8 +161,8 @@ export default {
                             month: this.getDate().getMonth() + 1,
                             date: this.getDate().getDate(),
                             hours: self.hours,
-                            minutes: self.minutes
-                        });
+                            minutes: self.useMinutes ? self.minutes : 0
+                        }, true);
 
                         $(self.calendar.root).hide();
                     }
