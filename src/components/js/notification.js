@@ -60,7 +60,7 @@ export default {
     },
     computed: {
         parsingTpl: function () {
-            let tpl = (this.icon === '') ? '' : '<div class="image"><i class="icon-help"></i></div>';
+            let tpl = (this.icon === '') ? '' : `<div class="image"><i class="icon-${this.icon}"></i></div>`;
             return this.template.split("%image").join(tpl);
         }
     },
