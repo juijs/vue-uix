@@ -9,18 +9,20 @@
 <!--<body class="jui">-->
 <body>
 <div id="app">
-    <uix-timepicker :size="'large'"
-                    :year="topYear"
-                    :month="topMonth"
-                    :date="topDate"
-                    :hours="topHours"
-                    :use-minutes="false"
-                    :use-calendar="true"
-                    :use-time="true"
-                    @change="onChangeValue"></uix-timepicker><br/><br/>
-    <uix-timepicker :size="'normal'" :year="bottomYear"></uix-timepicker><br/><br/>
-    <uix-timepicker :size="'small'"></uix-timepicker><br/><br/>
-    <uix-timepicker :size="'mini'"></uix-timepicker><br/><br/>
+    <uix-tab :items="tabs" :index="tabIndex" @change="onChangeTab"></uix-tab>
+
+    <div v-if="tabIndex === 0">
+        <uix-button :items="buttons" :type="'check'"></uix-button>
+    </div>
+    <div v-else-if="tabIndex === 1">
+        JavaScript
+    </div>
+    <div v-else-if="tabIndex === 2">
+        CSS
+    </div>
+    <div v-else>
+        SCSS
+    </div>
 </div>
 </body>
 </html>

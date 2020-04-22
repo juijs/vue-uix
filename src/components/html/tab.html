@@ -1,5 +1,5 @@
 <ul :class="[ type, position ]">
-    <li v-for="item in items">
+    <li v-for="item in items" :class="[ item.button ? 'checked menu' : '' ]">
         <a href="#">
             <template v-if="item.icon">
                 <i :class="'icon-' + item.icon"></i>

@@ -59,8 +59,11 @@ export default {
             event: {
                 'change': function(data, e) {
                     if(!e) return;
-
+                    
                     self.$emit('change', data, e);
+                },
+                'menu': function(data, e) {
+                    self.$emit('change', data, e)
                 }
             }
         });

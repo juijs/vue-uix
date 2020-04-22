@@ -11,22 +11,38 @@ Vue.use(VueUix, { theme: "classic" });
 
 window.vm = new Vue({
     el: "#app",
-    data: function() {
-        return {
-            topYear: 2015,
-            topMonth: 11,
-            topDate: 2,
-            topHours: 6,
-            bottomYear: 2020
-        }
+    data: {
+        // tab options
+        tabs: [
+            { text: "Java" },
+            { text: "JavaScript" },
+            { text: "CSS" },
+            { text: "SCSS", button: true }
+        ],
+        tabIndex: 1,
+
+        // button options
+        buttons: [
+            { icon: "", text: "A", value: "1", style: { width: "70px" } },
+            { icon: "", text: "B", value: "2", style: { width: "70px" } },
+            { icon: "", text: "C", value: "3", style: { width: "70px" } },
+            { icon: "home", text: "Home", value: "home", focus: true },
+            { icon: "gear", text: "Gear", value: "gear" },
+            { icon: "help", text: "", value: "help" }
+        ]
     },
     methods: {
-        onChangeValue: function(data, isCal) {
-            this.topYear = data.year;
-            this.topMonth = data.month;
-            this.topDate = data.date;
-            this.topHours = data.hours;
-            console.log(isCal);
+        onChangeTab: function(data, e) {
+            if (data.index !== 3)
+                this.tabIndex = data.index;
+            else {
+                alert("button click@@");
+                e.preventDefault();
+            }
+        },
+        onChangeMenu: function() {
+            alert("button click@@");
+                e.preventDefault();
         }
     }
 });
